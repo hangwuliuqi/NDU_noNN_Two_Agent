@@ -1,0 +1,2762 @@
+[
+  {
+    "iteration": 1,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 37.5,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate stays close to the highest-ranked evaluated geometry, which already produced two resonances with the low resonance exactly at 2.45 GHz, target S11 of -26.44 dB at 2.45 GHz, and -15.46 dB at 4.50 GHz. The high resonance was measured at 4.53 GHz, so increasing the lower slot length modestly from 35.00 mm to 37.50 mm is proposed as a local dimensional adjustment that may lower the high-band resonance toward 4.50 GHz while preserving the strong low-band geometry and matching conditions; the effect must be verified by a new HFSS evaluation.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 37.5,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 37.5,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate stays close to the highest-ranked evaluated geometry, which already produced two resonances with the low resonance exactly at 2.45 GHz, target S11 of -26.44 dB at 2.45 GHz, and -15.46 dB at 4.50 GHz. The high resonance was measured at 4.53 GHz, so increasing the lower slot length modestly from 35.00 mm to 37.50 mm is proposed as a local dimensional adjustment that may lower the high-band resonance toward 4.50 GHz while preserving the strong low-band geometry and matching conditions; the effect must be verified by a new HFSS evaluation.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 1,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 40.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This is a second, slightly stronger local extension of the best-ranked design and retains every parameter associated with its demonstrated dual-resonance behavior except the lower slot length. The top-ranked sample placed the high resonance at 4.53 GHz and met both fixed-target S11 thresholds, while several lower-ranked samples show that changes in the lower-slot and surrounding geometry can shift the upper resonance substantially; increasing l3 to 40.00 mm therefore provides a plausible alternate direction for bringing the upper resonance closer to 4.50 GHz without abandoning the measured low-band resonance and deep target matching of the leading design. The actual resonance count, positions, and target S11 values remain unverified until HFSS evaluation.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 40.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 40.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This is a second, slightly stronger local extension of the best-ranked design and retains every parameter associated with its demonstrated dual-resonance behavior except the lower slot length. The top-ranked sample placed the high resonance at 4.53 GHz and met both fixed-target S11 thresholds, while several lower-ranked samples show that changes in the lower-slot and surrounding geometry can shift the upper resonance substantially; increasing l3 to 40.00 mm therefore provides a plausible alternate direction for bringing the upper resonance closer to 4.50 GHz without abandoning the measured low-band resonance and deep target matching of the leading design. The actual resonance count, positions, and target S11 values remain unverified until HFSS evaluation.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 2,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 10.8
+      },
+      "rationale": "The highest-ranked geometry has two detected resonances, with the low resonance at 2.45 GHz and both fixed-target S11 values below -15.00 dB; its high resonance is at 4.53 GHz. This proposal preserves its slots, substrate, and widths while making a small feed-line adjustment to probe whether the high-band position and target-frequency match can improve without losing the strong low-band result. The supplied samples do not establish the direction of the feed-line effect, so this requires evaluation.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 10.8
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 10.8
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "The highest-ranked geometry has two detected resonances, with the low resonance at 2.45 GHz and both fixed-target S11 values below -15.00 dB; its high resonance is at 4.53 GHz. This proposal preserves its slots, substrate, and widths while making a small feed-line adjustment to probe whether the high-band position and target-frequency match can improve without losing the strong low-band result. The supplied samples do not establish the direction of the feed-line effect, so this requires evaluation.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 2,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.1,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design also stays close to the highest-ranked sample, whose low resonance is on target and whose high resonance is slightly above 4.50 GHz. A small middle-slot-width change offers a separate local test of high-band position and fixed-target matching while retaining the geometry associated with the strong 2.45 GHz result. The only guidebook rule concerns increasing l3, which the ranked samples associate with a much shallower 2.45 GHz target match, so this proposal leaves l3 unchanged. No supplied comparison establishes the effect of this width adjustment.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.1,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.1,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This design also stays close to the highest-ranked sample, whose low resonance is on target and whose high resonance is slightly above 4.50 GHz. A small middle-slot-width change offers a separate local test of high-band position and fixed-target matching while retaining the geometry associated with the strong 2.45 GHz result. The only guidebook rule concerns increasing l3, which the ranked samples associate with a much shallower 2.45 GHz target match, so this proposal leaves l3 unchanged. No supplied comparison establishes the effect of this width adjustment.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 3,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate repeats the best-ranked measured geometry, which produced resonances at 2.45 and 4.53 GHz and target S11 values of -26.44 dB and -15.46 dB. It provides a strong evidence-based baseline close to both target frequencies, with the 4.50 GHz match only narrowly beyond the requested threshold. The guidebook's r-0002-01 trend warns that increasing l3 in this tightly matched family tended to lower the low resonance and make the 2.45 GHz match shallower, so this proposal retains l3 at 35.00 mm rather than applying that change. Re-evaluation is needed to establish whether it meets the full stopping condition.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 114.09,
+      "b": 51.75,
+      "l1": 20.65,
+      "l2": 14.66,
+      "l3": 32.59,
+      "s1": 0.84,
+      "s2": 4.67,
+      "s3": 0.39,
+      "f_l": 11.98
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.1825266839475248,
+      "b": 0.43845304747121827,
+      "l1": -0.6182865507419972,
+      "l2": -0.3385919250686311,
+      "l3": -0.8049707947147429,
+      "s1": 0.39389600504340616,
+      "s2": 0.8360528119835147,
+      "s3": -0.7659995425373831,
+      "f_l": 0.9817662831599714
+    },
+    "rationale": "This candidate repeats the best-ranked measured geometry, which produced resonances at 2.45 and 4.53 GHz and target S11 values of -26.44 dB and -15.46 dB. It provides a strong evidence-based baseline close to both target frequencies, with the 4.50 GHz match only narrowly beyond the requested threshold. The guidebook's r-0002-01 trend warns that increasing l3 in this tightly matched family tended to lower the low resonance and make the 2.45 GHz match shallower, so this proposal retains l3 at 35.00 mm rather than applying that change. Re-evaluation is needed to establish whether it meets the full stopping condition.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 3,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate repeats the second-ranked measured geometry, whose two detected resonances were at 2.46 and 4.53 GHz and whose target S11 values were -27.41 dB and -15.64 dB. Those measurements place both resonances near their targets and both fixed-frequency matches beyond -15.00 dB, making this a direct high-performing confirmation point. It also avoids increasing l3, consistent with r-0002-01's local trend associating that increase with a lower low-band resonance and shallower 2.45 GHz S11; the small s2 difference from the top-ranked sample does not establish a directional rule. A new HFSS evaluation is required before judging success.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 118.16,
+      "b": 53.91,
+      "l1": 20.34,
+      "l2": 14.78,
+      "l3": 34.81,
+      "s1": 0.77,
+      "s2": 3.74,
+      "s3": 0.52,
+      "f_l": 10.54
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.6311821247454239,
+      "b": 0.9787470626390791,
+      "l1": -0.7190483862128285,
+      "l2": -0.21774485036624824,
+      "l3": -0.06321555221867525,
+      "s1": -0.2559135116803968,
+      "s2": -0.3276868849465506,
+      "s3": 0.1385855558434017,
+      "f_l": -0.458691520666358
+    },
+    "rationale": "This candidate repeats the second-ranked measured geometry, whose two detected resonances were at 2.46 and 4.53 GHz and whose target S11 values were -27.41 dB and -15.64 dB. Those measurements place both resonances near their targets and both fixed-frequency matches beyond -15.00 dB, making this a direct high-performing confirmation point. It also avoids increasing l3, consistent with r-0002-01's local trend associating that increase with a lower low-band resonance and shallower 2.45 GHz S11; the small s2 difference from the top-ranked sample does not establish a directional rule. A new HFSS evaluation is required before judging success.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 4,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.2,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate stays within the strongest local geometry family represented by ranks 1 and 2, which already produced two detected resonances near 2.45 GHz and 4.50 GHz and met both fixed-target S11 thresholds in the supplied evaluations. It increases s2 from the rank-1 value of 4.00 mm in the direction supported by rule r-0003-02; the nearby 4.10 mm comparison shifted the low resonance higher and deepened S11 at both fixed targets, although extending that trend to 4.20 mm remains an unverified hypothesis. The other dimensions are retained to preserve the demonstrated dual-resonance behavior, and this proposal must be checked by a new HFSS evaluation rather than being assumed to satisfy the stopping condition.",
+      "rules_used": ["r-0003-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.2,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.2,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate stays within the strongest local geometry family represented by ranks 1 and 2, which already produced two detected resonances near 2.45 GHz and 4.50 GHz and met both fixed-target S11 thresholds in the supplied evaluations. It increases s2 from the rank-1 value of 4.00 mm in the direction supported by rule r-0003-02; the nearby 4.10 mm comparison shifted the low resonance higher and deepened S11 at both fixed targets, although extending that trend to 4.20 mm remains an unverified hypothesis. The other dimensions are retained to preserve the demonstrated dual-resonance behavior, and this proposal must be checked by a new HFSS evaluation rather than being assumed to satisfy the stopping condition.",
+    "rules_used": ["r-0003-02"],
+    "error": null
+  },
+  {
+    "iteration": 4,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.1,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate directly follows the best observed local comparison: relative to rank 1, increasing s2 from 4.00 mm to 4.10 mm in rank 2 produced a slightly higher low-band resonance and deeper measured S11 at both 2.45 GHz and 4.50 GHz, while retaining two detected resonances and the same high-band frequency. The complete geometry therefore preserves the rank-1 dimensions associated with the strongest ranking evidence and applies only this coordinated, evidence-supported adjustment. Because the rule has limited confidence and the required criteria concern independently evaluated resonance positions and fixed-target S11, the candidate remains provisional until a new HFSS evaluation.",
+      "rules_used": ["r-0003-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.1,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 112.26,
+      "b": 47.82,
+      "l1": 22.59,
+      "l2": 14.6,
+      "l3": 32.2,
+      "s1": 0.76,
+      "s2": 3.77,
+      "s3": 0.41,
+      "f_l": 11.59
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.5475412830080191,
+      "b": -0.5444516106531849,
+      "l1": 0.029532360129904678,
+      "l2": -0.40073604549194464,
+      "l3": -0.9342083933167364,
+      "s1": -0.35693927552603744,
+      "s2": -0.4081010346085383,
+      "s3": -0.6436077187205023,
+      "f_l": 0.5929869150388196
+    },
+    "rationale": "This candidate directly follows the best observed local comparison: relative to rank 1, increasing s2 from 4.00 mm to 4.10 mm in rank 2 produced a slightly higher low-band resonance and deeper measured S11 at both 2.45 GHz and 4.50 GHz, while retaining two detected resonances and the same high-band frequency. The complete geometry therefore preserves the rank-1 dimensions associated with the strongest ranking evidence and applies only this coordinated, evidence-supported adjustment. Because the rule has limited confidence and the required criteria concern independently evaluated resonance positions and fixed-target S11, the candidate remains provisional until a new HFSS evaluation.",
+    "rules_used": ["r-0003-02"],
+    "error": null
+  },
+  {
+    "iteration": 5,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.2,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This keeps the geometry of the highest-ranked matched family, which produced two actual resonances at 2.45 and 4.53 GHz and already met the fixed-target S11 threshold at both bands. Compared with the otherwise identical 4.00 mm middle-slot width sample, the 4.20 mm variant ranked second and had deeper target S11 at both frequencies while retaining the same reported resonance positions, consistent with rule r-0004-02. It is a strong evidence-based candidate for improving target matching, though the high resonance remains slightly above its target and the result requires a new HFSS evaluation.",
+      "rules_used": ["r-0004-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.2,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 119.61,
+      "b": 46.08,
+      "l1": 23.46,
+      "l2": 15.0,
+      "l3": 37.96,
+      "s1": 0.86,
+      "s2": 3.42,
+      "s3": 0.55,
+      "f_l": 11.16
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.9218988689041974,
+      "b": -0.9809973913552283,
+      "l1": 0.320400194148005,
+      "l2": 0.05165184164583758,
+      "l3": 0.986709181922933,
+      "s1": 0.584730880695193,
+      "s2": -0.9757771117649465,
+      "s3": 0.3885831468819172,
+      "f_l": 0.15979337491359002
+    },
+    "rationale": "This keeps the geometry of the highest-ranked matched family, which produced two actual resonances at 2.45 and 4.53 GHz and already met the fixed-target S11 threshold at both bands. Compared with the otherwise identical 4.00 mm middle-slot width sample, the 4.20 mm variant ranked second and had deeper target S11 at both frequencies while retaining the same reported resonance positions, consistent with rule r-0004-02. It is a strong evidence-based candidate for improving target matching, though the high resonance remains slightly above its target and the result requires a new HFSS evaluation.",
+    "rules_used": ["r-0004-02"],
+    "error": null
+  },
+  {
+    "iteration": 5,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.1,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This uses the same well-supported geometry as the top-ranked samples and selects the intermediate 4.10 mm middle-slot width, whose evaluated result showed two resonances near both targets and deeper S11 at 2.45 and 4.50 GHz than the 4.00 mm reference. That direction matches rule r-0004-02, which reports deeper fixed-target S11 with increasing middle-slot width in this matched local family. The candidate preserves the observed low-band match while plausibly improving target-frequency matching; its actual performance and the small high-band frequency offset must be checked by a new HFSS evaluation.",
+      "rules_used": ["r-0004-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.1,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 114.36,
+      "b": 47.55,
+      "l1": 22.26,
+      "l2": 14.38,
+      "l3": 36.91,
+      "s1": 0.87,
+      "s2": 4.71,
+      "s3": 0.42,
+      "f_l": 11.06
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.1286240340631215,
+      "b": -0.6127250224471859,
+      "l1": -0.08111524005757587,
+      "l2": -0.6244796783582245,
+      "l3": 0.6372275067573954,
+      "s1": 0.6674567172831505,
+      "s2": 0.7651411223099407,
+      "s3": -0.580963899031236,
+      "f_l": 0.056232536385425025
+    },
+    "rationale": "This uses the same well-supported geometry as the top-ranked samples and selects the intermediate 4.10 mm middle-slot width, whose evaluated result showed two resonances near both targets and deeper S11 at 2.45 and 4.50 GHz than the 4.00 mm reference. That direction matches rule r-0004-02, which reports deeper fixed-target S11 with increasing middle-slot width in this matched local family. The candidate preserves the observed low-band match while plausibly improving target-frequency matching; its actual performance and the small high-band frequency offset must be checked by a new HFSS evaluation.",
+    "rules_used": ["r-0004-02"],
+    "error": null
+  },
+  {
+    "iteration": 6,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.2,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This geometry follows the strongest local family represented by ranks 1 and 2, which produced two detected resonances with the low resonance exactly at 2.45 GHz and the high resonance near 4.53 GHz while providing the best fixed-target S11 values in the supplied set. Relative to the rank-1 geometry, increasing s2 to 4.20 mm applies r-0005-02 and is supported by the nearby comparison showing deeper S11 at both 2.45 and 4.50 GHz without a meaningful detected-resonance shift. Keeping l3 at 35.00 mm avoids the low-resonance shift and shallower 2.45 GHz response associated with increasing l3 under r-0005-01; the actual dual-band tolerances and target thresholds require a new HFSS evaluation.",
+      "rules_used": ["r-0005-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.2,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 110.88,
+      "b": 51.89,
+      "l1": 20.6,
+      "l2": 14.9,
+      "l3": 33.18,
+      "s1": 0.77,
+      "s2": 3.97,
+      "s3": 0.53,
+      "f_l": 10.78
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.8240622999754139,
+      "b": 0.4714325481079571,
+      "l1": -0.6347723253346145,
+      "l2": -0.09552180690003276,
+      "l3": -0.6056002687376947,
+      "s1": -0.30344224475341663,
+      "s2": -0.2866282127698079,
+      "s3": 0.18238144866822426,
+      "f_l": -0.22266979715435586
+    },
+    "rationale": "This geometry follows the strongest local family represented by ranks 1 and 2, which produced two detected resonances with the low resonance exactly at 2.45 GHz and the high resonance near 4.53 GHz while providing the best fixed-target S11 values in the supplied set. Relative to the rank-1 geometry, increasing s2 to 4.20 mm applies r-0005-02 and is supported by the nearby comparison showing deeper S11 at both 2.45 and 4.50 GHz without a meaningful detected-resonance shift. Keeping l3 at 35.00 mm avoids the low-resonance shift and shallower 2.45 GHz response associated with increasing l3 under r-0005-01; the actual dual-band tolerances and target thresholds require a new HFSS evaluation.",
+    "rules_used": ["r-0005-02"],
+    "error": null
+  },
+  {
+    "iteration": 6,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.1,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate preserves the complete high-performing 115.00 by 50.00 mm geometry family and uses the intermediate s2 value directly supported by rank 3, where two resonances were detected at 2.46 and 4.53 GHz and both fixed-target S11 values were deep. Applying r-0005-02 through the coordinated increase of s2 from 4.00 to 4.10 mm targets stronger matching at both fixed frequencies while the supplied evidence indicates little resonance-frequency movement, retaining the geometry's close low-band placement and avoiding the documented adverse low-band trend from increasing l3. The measured resonance count, frequency tolerances, and S11 limits remain to be verified by a new HFSS evaluation.",
+      "rules_used": ["r-0005-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.1,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.28,
+      "b": 51.35,
+      "l1": 24.38,
+      "l2": 15.0,
+      "l3": 35.91,
+      "s1": 0.76,
+      "s2": 4.79,
+      "s3": 0.61,
+      "f_l": 10.16
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.055789072888437596,
+      "b": 0.33867152664797806,
+      "l1": 0.6277657166635675,
+      "l2": 0.9344064871775537,
+      "l3": 0.3035469191069764,
+      "s1": -0.428337034650186,
+      "s2": 0.857899648068545,
+      "s3": 0.7778350819863977,
+      "f_l": -0.8446099303000911
+    },
+    "rationale": "This candidate preserves the complete high-performing 115.00 by 50.00 mm geometry family and uses the intermediate s2 value directly supported by rank 3, where two resonances were detected at 2.46 and 4.53 GHz and both fixed-target S11 values were deep. Applying r-0005-02 through the coordinated increase of s2 from 4.00 to 4.10 mm targets stronger matching at both fixed frequencies while the supplied evidence indicates little resonance-frequency movement, retaining the geometry's close low-band placement and avoiding the documented adverse low-band trend from increasing l3. The measured resonance count, frequency tolerances, and S11 limits remain to be verified by a new HFSS evaluation.",
+    "rules_used": ["r-0005-02"],
+    "error": null
+  },
+  {
+    "iteration": 7,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.2,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate stays on the strongest observed 115.00 by 50.00 mm geometry family, which produced two detected resonances near the desired bands and the highest ranking scores, while increasing s2 from 4.00 to 4.20 mm follows rule r-0006-02. The ranked comparisons showed progressively deeper fixed-target S11 at both 2.45 GHz and 4.50 GHz as s2 increased through this narrow range, with resonance frequencies remaining effectively stable, so this design is intended to preserve the strong resonance positioning while improving target-frequency matching; its actual performance must be confirmed by a new HFSS evaluation.",
+      "rules_used": ["r-0006-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.2,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 116.9,
+      "b": 49.33,
+      "l1": 24.42,
+      "l2": 15.0,
+      "l3": 35.92,
+      "s1": 0.74,
+      "s2": 4.52,
+      "s3": 0.54,
+      "f_l": 10.92
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.3805974729748778,
+      "b": -0.16738089518680144,
+      "l1": 0.6390481048920684,
+      "l2": 0.8022083858311233,
+      "l3": 0.30753616481597135,
+      "s1": -0.5521967790036613,
+      "s2": 0.3984176543757525,
+      "s3": 0.2930057327159983,
+      "f_l": -0.08131182982409713
+    },
+    "rationale": "This candidate stays on the strongest observed 115.00 by 50.00 mm geometry family, which produced two detected resonances near the desired bands and the highest ranking scores, while increasing s2 from 4.00 to 4.20 mm follows rule r-0006-02. The ranked comparisons showed progressively deeper fixed-target S11 at both 2.45 GHz and 4.50 GHz as s2 increased through this narrow range, with resonance frequencies remaining effectively stable, so this design is intended to preserve the strong resonance positioning while improving target-frequency matching; its actual performance must be confirmed by a new HFSS evaluation.",
+    "rules_used": ["r-0006-02"],
+    "error": null
+  },
+  {
+    "iteration": 7,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.1,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate uses the same high-performing complete geometry as the top-ranked family and applies the supported s2 increase from 4.00 to 4.10 mm under rule r-0006-02. The supplied neighboring evaluations indicate that this coordinated change deepened S11 at both fixed target frequencies without a meaningful shift in either detected resonance, making it a conservative candidate for maintaining the observed low-band resonance at 2.45 GHz and the nearby high-band resonance while improving matching at both targets; a new HFSS evaluation is required to determine whether the dual-band thresholds and frequency tolerances are met.",
+      "rules_used": ["r-0006-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.1,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 114.93,
+      "b": 53.9,
+      "l1": 23.48,
+      "l2": 14.43,
+      "l3": 34.85,
+      "s1": 0.74,
+      "s2": 4.73,
+      "s3": 0.38,
+      "f_l": 10.72
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.013443710165152334,
+      "b": 0.9746015725011274,
+      "l1": 0.3264463010786651,
+      "l2": -0.5691809723553141,
+      "l3": -0.05058907365269505,
+      "s1": -0.5564210897916007,
+      "s2": 0.7859190201241493,
+      "s3": -0.8731560192880679,
+      "f_l": -0.2768546931505347
+    },
+    "rationale": "This candidate uses the same high-performing complete geometry as the top-ranked family and applies the supported s2 increase from 4.00 to 4.10 mm under rule r-0006-02. The supplied neighboring evaluations indicate that this coordinated change deepened S11 at both fixed target frequencies without a meaningful shift in either detected resonance, making it a conservative candidate for maintaining the observed low-band resonance at 2.45 GHz and the nearby high-band resonance while improving matching at both targets; a new HFSS evaluation is required to determine whether the dual-band thresholds and frequency tolerances are met.",
+    "rules_used": ["r-0006-02"],
+    "error": null
+  },
+  {
+    "iteration": 8,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.2,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design preserves the rank-1 and rank-2 geometry that already produced two detected resonances, with the low resonance exactly at 2.45 GHz and the high resonance near 4.50 GHz, while using the larger tested middle-slot width. The highest-ranked evidence shows that increasing s2 from 4.00 to 4.20 mm deepened both fixed-target S11 values without materially changing either resonance position, so this candidate directly emphasizes the matching thresholds while retaining the established dual-band geometry. A new HFSS evaluation is required to verify the actual resonance frequencies and target S11 values.",
+      "rules_used": ["r-0007-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.2,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 112.93,
+      "b": 51.67,
+      "l1": 21.7,
+      "l2": 15.0,
+      "l3": 33.03,
+      "s1": 0.88,
+      "s2": 4.75,
+      "s3": 0.4,
+      "f_l": 11.55
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.41327826312586824,
+      "b": 0.417925696096882,
+      "l1": -0.26721077706673313,
+      "l2": 0.42931745793514553,
+      "l3": -0.6562556098946737,
+      "s1": 0.7949868429417111,
+      "s2": 0.6890231287735602,
+      "s3": -0.7321167795766967,
+      "f_l": 0.550971102730188
+    },
+    "rationale": "This design preserves the rank-1 and rank-2 geometry that already produced two detected resonances, with the low resonance exactly at 2.45 GHz and the high resonance near 4.50 GHz, while using the larger tested middle-slot width. The highest-ranked evidence shows that increasing s2 from 4.00 to 4.20 mm deepened both fixed-target S11 values without materially changing either resonance position, so this candidate directly emphasizes the matching thresholds while retaining the established dual-band geometry. A new HFSS evaluation is required to verify the actual resonance frequencies and target S11 values.",
+    "rules_used": ["r-0007-02"],
+    "error": null
+  },
+  {
+    "iteration": 8,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.3,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate keeps the complete geometry centered on the strongest observed dual-resonance family and makes a small further increase in s2 beyond the tested 4.20 mm value. The top-ranked samples consistently show that increasing s2 from 4.00 toward 4.20 mm improves both fixed-target S11 values while leaving the low resonance at approximately 2.45 GHz and the high resonance close to 4.50 GHz; extending that coordinated trend cautiously to 4.30 mm may further improve matching, although the guidebook evidence is limited to the narrower tested interval. A new HFSS evaluation is required to determine whether the resonance positions and both target S11 thresholds improve.",
+      "rules_used": ["r-0007-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.3,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.3,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate keeps the complete geometry centered on the strongest observed dual-resonance family and makes a small further increase in s2 beyond the tested 4.20 mm value. The top-ranked samples consistently show that increasing s2 from 4.00 toward 4.20 mm improves both fixed-target S11 values while leaving the low resonance at approximately 2.45 GHz and the high resonance close to 4.50 GHz; extending that coordinated trend cautiously to 4.30 mm may further improve matching, although the guidebook evidence is limited to the narrower tested interval. A new HFSS evaluation is required to determine whether the resonance positions and both target S11 thresholds improve.",
+    "rules_used": ["r-0007-02"],
+    "error": null
+  },
+  {
+    "iteration": 9,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.3,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design retains the geometry shared by the highest-ranked samples, which consistently produced two detected resonances near the desired bands and strong low-band matching. Relative to the rank-1 geometry, increasing s2 to 4.30 mm follows the supplied rule that this coordinated change deepened S11 at both fixed targets while keeping the resonance frequencies near 2.45 and 4.50 GHz; the rank-3 evidence also showed the high resonance moving from 4.53 to 4.52 GHz and the low resonance remaining close to target. The new evaluation is therefore intended to preserve the established dual-resonance behavior while improving fixed-target matching and slightly reducing the high-band frequency error, without claiming that the stopping thresholds are already met.",
+      "rules_used": ["r-0008-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.3,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 111.11,
+      "b": 48.0,
+      "l1": 20.64,
+      "l2": 14.49,
+      "l3": 35.53,
+      "s1": 0.74,
+      "s2": 4.96,
+      "s3": 0.4,
+      "f_l": 11.03
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.7775891122841088,
+      "b": -0.5005536947620715,
+      "l1": -0.6210667907511851,
+      "l2": -0.5079191317995728,
+      "l3": 0.17580004650641579,
+      "s1": -0.5817137984862348,
+      "s2": 0.8226936174991579,
+      "s3": -0.682598478911981,
+      "f_l": 0.025663170554536485
+    },
+    "rationale": "This design retains the geometry shared by the highest-ranked samples, which consistently produced two detected resonances near the desired bands and strong low-band matching. Relative to the rank-1 geometry, increasing s2 to 4.30 mm follows the supplied rule that this coordinated change deepened S11 at both fixed targets while keeping the resonance frequencies near 2.45 and 4.50 GHz; the rank-3 evidence also showed the high resonance moving from 4.53 to 4.52 GHz and the low resonance remaining close to target. The new evaluation is therefore intended to preserve the established dual-resonance behavior while improving fixed-target matching and slightly reducing the high-band frequency error, without claiming that the stopping thresholds are already met.",
+    "rules_used": ["r-0008-02"],
+    "error": null
+  },
+  {
+    "iteration": 9,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.2,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design uses the strongest common geometry from ranks 1 through 4 and applies the supported s2 increase to an intermediate value between the rank-2 and rank-3 evaluated settings. Those samples both had two resonances close to the desired bands, with the rank-2 case providing very deep fixed-target S11 and the rank-3 case placing the high resonance slightly nearer 4.50 GHz. The guidebook indicates that increasing s2 from the 4.00 mm baseline tends to deepen S11 at both fixed targets without materially shifting either resonance, so s2=4.20 mm is proposed as a conservative balance intended to retain the demonstrated resonance positions while improving target-frequency matching; real HFSS evaluation is required to determine whether either threshold is achieved.",
+      "rules_used": ["r-0008-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.2,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 111.09,
+      "b": 50.94,
+      "l1": 20.18,
+      "l2": 15.0,
+      "l3": 37.24,
+      "s1": 0.7,
+      "s2": 3.52,
+      "s3": 0.46,
+      "f_l": 10.78
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.7827408653639836,
+      "b": 0.2353540874314064,
+      "l1": -0.7749327007712976,
+      "l2": 0.5321869360380664,
+      "l3": 0.7450870979339916,
+      "s1": -0.999941284039914,
+      "s2": -0.8473095371383574,
+      "s3": -0.2717341016164898,
+      "f_l": -0.2213139451081012
+    },
+    "rationale": "This design uses the strongest common geometry from ranks 1 through 4 and applies the supported s2 increase to an intermediate value between the rank-2 and rank-3 evaluated settings. Those samples both had two resonances close to the desired bands, with the rank-2 case providing very deep fixed-target S11 and the rank-3 case placing the high resonance slightly nearer 4.50 GHz. The guidebook indicates that increasing s2 from the 4.00 mm baseline tends to deepen S11 at both fixed targets without materially shifting either resonance, so s2=4.20 mm is proposed as a conservative balance intended to retain the demonstrated resonance positions while improving target-frequency matching; real HFSS evaluation is required to determine whether either threshold is achieved.",
+    "rules_used": ["r-0008-02"],
+    "error": null
+  },
+  {
+    "iteration": 10,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.25,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design preserves the strongest matched geometry shared by ranks 1 through 4, where two resonances were detected near the required bands and both target-frequency S11 values were already below -15.00 dB. The middle-slot width is increased modestly from the rank-1 baseline of 4.00 mm, staying within the observed 4.10 to 4.30 mm improvement trend and between the evaluated 4.20 and 4.30 mm cases. Rule r-0009-02 supports this coordinated local adjustment as a plausible way to deepen S11 at both fixed targets while keeping the resonance positions near their demonstrated values; the new evaluation must verify the actual resonance frequencies and thresholds.",
+      "rules_used": ["r-0009-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.25,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.25,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This design preserves the strongest matched geometry shared by ranks 1 through 4, where two resonances were detected near the required bands and both target-frequency S11 values were already below -15.00 dB. The middle-slot width is increased modestly from the rank-1 baseline of 4.00 mm, staying within the observed 4.10 to 4.30 mm improvement trend and between the evaluated 4.20 and 4.30 mm cases. Rule r-0009-02 supports this coordinated local adjustment as a plausible way to deepen S11 at both fixed targets while keeping the resonance positions near their demonstrated values; the new evaluation must verify the actual resonance frequencies and thresholds.",
+    "rules_used": ["r-0009-02"],
+    "error": null
+  },
+  {
+    "iteration": 10,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.35,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate retains the geometry that produced the highest-ranked dual-resonance results, including a low resonance at the 2.45 GHz target and a high resonance close to 4.50 GHz, while extending the strongest observed middle-slot-width trend slightly beyond the evaluated 4.30 mm point. The increase in s2 is intended to seek further fixed-target S11 improvement based on ranks 1 through 4 and rule r-0009-02, which consistently associates larger s2 values in this narrow matched family with deeper S11 at both targets and little resonance movement. Because the guidebook explicitly limits confidence to the tested local interval, this remains a hypothesis requiring new HFSS evaluation.",
+      "rules_used": ["r-0009-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate retains the geometry that produced the highest-ranked dual-resonance results, including a low resonance at the 2.45 GHz target and a high resonance close to 4.50 GHz, while extending the strongest observed middle-slot-width trend slightly beyond the evaluated 4.30 mm point. The increase in s2 is intended to seek further fixed-target S11 improvement based on ranks 1 through 4 and rule r-0009-02, which consistently associates larger s2 values in this narrow matched family with deeper S11 at both targets and little resonance movement. Because the guidebook explicitly limits confidence to the tested local interval, this remains a hypothesis requiring new HFSS evaluation.",
+    "rules_used": ["r-0009-02"],
+    "error": null
+  },
+  {
+    "iteration": 11,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.35,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate preserves the strongest matched geometry shared by the highest-ranked samples, including the measured 2.45 GHz low resonance and the high resonance near 4.52 to 4.53 GHz, while increasing s2 to the upper end of the locally supported improvement range. The ranked comparisons show that increasing s2 from 4.00 through 4.30 and 4.35 repeatedly deepened fixed-target S11 at both 2.45 and 4.50 GHz without a meaningful observed resonance-position change, so this design is intended to retain the favorable dual-resonance placement while improving target-frequency matching; confirmation requires a new HFSS evaluation.",
+      "rules_used": ["r-0010-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 118.84,
+      "b": 52.01,
+      "l1": 22.03,
+      "l2": 15.0,
+      "l3": 36.68,
+      "s1": 0.71,
+      "s2": 4.8,
+      "s3": 0.43,
+      "f_l": 11.83
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.7676670976314923,
+      "b": 0.5024374298770351,
+      "l1": -0.15610947678685894,
+      "l2": 0.16488003035694998,
+      "l3": 0.558490009450795,
+      "s1": -0.9216123047638245,
+      "s2": 0.5605416707709487,
+      "s3": -0.5263952755468926,
+      "f_l": 0.8319344211275157
+    },
+    "rationale": "This candidate preserves the strongest matched geometry shared by the highest-ranked samples, including the measured 2.45 GHz low resonance and the high resonance near 4.52 to 4.53 GHz, while increasing s2 to the upper end of the locally supported improvement range. The ranked comparisons show that increasing s2 from 4.00 through 4.30 and 4.35 repeatedly deepened fixed-target S11 at both 2.45 and 4.50 GHz without a meaningful observed resonance-position change, so this design is intended to retain the favorable dual-resonance placement while improving target-frequency matching; confirmation requires a new HFSS evaluation.",
+    "rules_used": ["r-0010-01"],
+    "error": null
+  },
+  {
+    "iteration": 11,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.3,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate uses the same geometry as the highest-ranked 115.00 by 50.00 mm family and selects s2=4.30 mm, which is directly supported by the local ranked sweep. Samples with this coordinated geometry and increased s2 retained two resonances close to the desired bands while producing more-negative S11 at both fixed targets than the s2=4.00 baseline, making this a conservative target-matching candidate with less extrapolation than the 4.35 mm option; its actual resonance positions and threshold compliance must be checked by a new HFSS evaluation.",
+      "rules_used": ["r-0010-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.3,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 114.67,
+      "b": 47.55,
+      "l1": 24.18,
+      "l2": 15.0,
+      "l3": 36.53,
+      "s1": 0.78,
+      "s2": 3.81,
+      "s3": 0.63,
+      "f_l": 10.97
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.0665283060369195,
+      "b": -0.6120473948339253,
+      "l1": 0.559973765253686,
+      "l2": 0.22029437681741526,
+      "l3": 0.5095452191263634,
+      "s1": -0.1634692104802784,
+      "s2": -0.6118785639529212,
+      "s3": 0.9297618516969108,
+      "f_l": -0.03458815048481645
+    },
+    "rationale": "This candidate uses the same geometry as the highest-ranked 115.00 by 50.00 mm family and selects s2=4.30 mm, which is directly supported by the local ranked sweep. Samples with this coordinated geometry and increased s2 retained two resonances close to the desired bands while producing more-negative S11 at both fixed targets than the s2=4.00 baseline, making this a conservative target-matching candidate with less extrapolation than the 4.35 mm option; its actual resonance positions and threshold compliance must be checked by a new HFSS evaluation.",
+    "rules_used": ["r-0010-01"],
+    "error": null
+  },
+  {
+    "iteration": 12,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.25,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design preserves the complete geometry shared by the highest-ranked samples, which consistently produced two detected resonances near 2.45 GHz and 4.52 to 4.53 GHz with both fixed-target S11 values below -15.00 dB. The middle-slot width is set to 4.25 mm within the locally supported increase from 4.00 mm, following the evidence that this coordinated change can deepen S11 at both targets while leaving the resonance positions approximately unchanged; the new HFSS evaluation is still required to verify the objective directly.",
+      "rules_used": ["r-0011-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.25,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 113.02,
+      "b": 53.79,
+      "l1": 21.99,
+      "l2": 15.0,
+      "l3": 37.48,
+      "s1": 0.86,
+      "s2": 4.36,
+      "s3": 0.4,
+      "f_l": 10.27
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.3959454949667347,
+      "b": 0.9465420302454681,
+      "l1": -0.17080631442913452,
+      "l2": 0.8790192344774848,
+      "l3": 0.8250645424807967,
+      "s1": 0.5956035589650475,
+      "s2": 0.13687066644768464,
+      "s3": -0.7203040773547011,
+      "f_l": -0.7252907978927072
+    },
+    "rationale": "This design preserves the complete geometry shared by the highest-ranked samples, which consistently produced two detected resonances near 2.45 GHz and 4.52 to 4.53 GHz with both fixed-target S11 values below -15.00 dB. The middle-slot width is set to 4.25 mm within the locally supported increase from 4.00 mm, following the evidence that this coordinated change can deepen S11 at both targets while leaving the resonance positions approximately unchanged; the new HFSS evaluation is still required to verify the objective directly.",
+    "rules_used": ["r-0011-01"],
+    "error": null
+  },
+  {
+    "iteration": 12,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.35,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate retains the geometry of the strongest dual-resonance cluster, including the observed low-band resonance at 2.45 to 2.46 GHz and high-band resonance near 4.52 to 4.53 GHz, while moving the middle-slot width to the upper end of the guidebook-supported local range. The ranked evidence shows that this change can improve fixed-target matching at both 2.45 GHz and 4.50 GHz without a clear resonance-position shift, although the trend is not strictly monotonic and must be confirmed by a new HFSS evaluation.",
+      "rules_used": ["r-0011-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.45,
+      "b": 48.44,
+      "l1": 23.3,
+      "l2": 14.76,
+      "l3": 36.02,
+      "s1": 0.89,
+      "s2": 5.07,
+      "s3": 0.57,
+      "f_l": 10.61
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.0903570719766813,
+      "b": -0.3888825182343003,
+      "l1": 0.26806151829011027,
+      "l2": -0.23929971475187983,
+      "l3": 0.3406005884742729,
+      "s1": 0.9065161621947413,
+      "s2": 0.9016762886580416,
+      "s3": 0.4896255851899567,
+      "f_l": -0.38635634252641426
+    },
+    "rationale": "This candidate retains the geometry of the strongest dual-resonance cluster, including the observed low-band resonance at 2.45 to 2.46 GHz and high-band resonance near 4.52 to 4.53 GHz, while moving the middle-slot width to the upper end of the guidebook-supported local range. The ranked evidence shows that this change can improve fixed-target matching at both 2.45 GHz and 4.50 GHz without a clear resonance-position shift, although the trend is not strictly monotonic and must be confirmed by a new HFSS evaluation.",
+    "rules_used": ["r-0011-01"],
+    "error": null
+  },
+  {
+    "iteration": 13,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.3,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design preserves the geometry shared by the highest-ranked samples, where two resonances were consistently detected near 2.45 GHz and 4.52 to 4.53 GHz, while setting s2 to 4.30 mm within the guidebook rule's validated local range. The ranked evidence indicates that increasing s2 from 4.00 mm toward 4.35 mm generally deepened S11 at both fixed targets without materially shifting either resonance, so this intermediate value is intended to improve target-frequency matching while retaining the established dual-resonance behavior; the actual thresholds and resonance positions require a new HFSS evaluation.",
+      "rules_used": ["r-0012-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.3,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 111.87,
+      "b": 50.62,
+      "l1": 25.07,
+      "l2": 14.85,
+      "l3": 33.22,
+      "s1": 0.75,
+      "s2": 4.77,
+      "s3": 0.49,
+      "f_l": 10.23
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.6252125702967246,
+      "b": 0.15454470863254022,
+      "l1": 0.8577748161134979,
+      "l2": -0.15258912059591645,
+      "l3": -0.5929812190042683,
+      "s1": -0.5298520976449332,
+      "s2": 0.5830201666360004,
+      "s3": -0.09918194113423984,
+      "f_l": -0.7744476108667575
+    },
+    "rationale": "This design preserves the geometry shared by the highest-ranked samples, where two resonances were consistently detected near 2.45 GHz and 4.52 to 4.53 GHz, while setting s2 to 4.30 mm within the guidebook rule's validated local range. The ranked evidence indicates that increasing s2 from 4.00 mm toward 4.35 mm generally deepened S11 at both fixed targets without materially shifting either resonance, so this intermediate value is intended to improve target-frequency matching while retaining the established dual-resonance behavior; the actual thresholds and resonance positions require a new HFSS evaluation.",
+    "rules_used": ["r-0012-01"],
+    "error": null
+  },
+  {
+    "iteration": 13,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.34,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design keeps the complete geometry at the repeatedly successful local configuration and moves s2 close to the upper end of the directly evidenced 4.00 to 4.35 mm interval. The top-ranked samples show strong dual-band behavior at this geometry, and the guidebook reports that coordinated increases in s2 generally make S11 at 2.45 GHz and 4.50 GHz more negative while leaving the low resonance near 2.45 GHz and the high resonance near 4.52 to 4.53 GHz. The near-maximum s2 value is therefore proposed to pursue deeper fixed-target matching while preserving the observed resonance structure, subject to confirmation by a new HFSS evaluation.",
+      "rules_used": ["r-0012-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.34,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.34,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This design keeps the complete geometry at the repeatedly successful local configuration and moves s2 close to the upper end of the directly evidenced 4.00 to 4.35 mm interval. The top-ranked samples show strong dual-band behavior at this geometry, and the guidebook reports that coordinated increases in s2 generally make S11 at 2.45 GHz and 4.50 GHz more negative while leaving the low resonance near 2.45 GHz and the high resonance near 4.52 to 4.53 GHz. The near-maximum s2 value is therefore proposed to pursue deeper fixed-target matching while preserving the observed resonance structure, subject to confirmation by a new HFSS evaluation.",
+    "rules_used": ["r-0012-01"],
+    "error": null
+  },
+  {
+    "iteration": 14,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.35,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design preserves the geometry shared by the highest-ranking evaluated samples, where two resonances were measured near 2.45 GHz and 4.52–4.53 GHz and both fixed-target S11 values were already below -15.00 dB. It increases s2 from the strong local configurations at 4.00–4.30 mm to the upper tested value of 4.35 mm, following rule r-0013-01, whose evidence indicates that this coordinated change can deepen S11 at both fixed targets while leaving the resonance positions near their observed locations. The rule is local and trend-based, so the candidate requires a new HFSS evaluation and is not claimed to satisfy the stopping condition beforehand.",
+      "rules_used": ["r-0013-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 114.68,
+      "b": 51.25,
+      "l1": 23.79,
+      "l2": 15.0,
+      "l3": 32.34,
+      "s1": 0.77,
+      "s2": 3.7,
+      "s3": 0.37,
+      "f_l": 10.72
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.06427694310683463,
+      "b": 0.3117207439613887,
+      "l1": 0.43111405195312047,
+      "l2": 0.9877941103277097,
+      "l3": -0.8854172162923599,
+      "s1": -0.28270727605475554,
+      "s2": -0.8066104475055103,
+      "s3": -0.9368376703433605,
+      "f_l": -0.27608172314909374
+    },
+    "rationale": "This design preserves the geometry shared by the highest-ranking evaluated samples, where two resonances were measured near 2.45 GHz and 4.52–4.53 GHz and both fixed-target S11 values were already below -15.00 dB. It increases s2 from the strong local configurations at 4.00–4.30 mm to the upper tested value of 4.35 mm, following rule r-0013-01, whose evidence indicates that this coordinated change can deepen S11 at both fixed targets while leaving the resonance positions near their observed locations. The rule is local and trend-based, so the candidate requires a new HFSS evaluation and is not claimed to satisfy the stopping condition beforehand.",
+    "rules_used": ["r-0013-01"],
+    "error": null
+  },
+  {
+    "iteration": 14,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.3,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This nearby candidate retains the complete geometry of the top-ranked family, which consistently produced two detected resonances close to the 2.45 GHz low-band target and the 4.50 GHz high-band target, while keeping both target-frequency S11 measurements below -15.00 dB in the strongest samples. Setting s2 to 4.30 mm applies the increasing-s2 direction from rule r-0013-01 without moving beyond the locally evidenced 4.00–4.35 mm domain, offering a conservative alternative intended to preserve resonance placement and improve fixed-target matching. Its actual resonances and S11 values remain unknown until HFSS evaluation, so no stopping criterion is asserted.",
+      "rules_used": ["r-0013-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.3,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 111.46,
+      "b": 47.11,
+      "l1": 24.46,
+      "l2": 14.74,
+      "l3": 36.0,
+      "s1": 0.85,
+      "s2": 4.83,
+      "s3": 0.54,
+      "f_l": 11.39
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.7078587998732113,
+      "b": -0.7216502439595727,
+      "l1": 0.6543407425969681,
+      "l2": -0.25555397428452187,
+      "l3": 0.3339020785068678,
+      "s1": 0.5494753659831055,
+      "s2": 0.6669355553282512,
+      "s3": 0.30050258622168236,
+      "f_l": 0.39327372657867365
+    },
+    "rationale": "This nearby candidate retains the complete geometry of the top-ranked family, which consistently produced two detected resonances close to the 2.45 GHz low-band target and the 4.50 GHz high-band target, while keeping both target-frequency S11 measurements below -15.00 dB in the strongest samples. Setting s2 to 4.30 mm applies the increasing-s2 direction from rule r-0013-01 without moving beyond the locally evidenced 4.00–4.35 mm domain, offering a conservative alternative intended to preserve resonance placement and improve fixed-target matching. Its actual resonances and S11 values remain unknown until HFSS evaluation, so no stopping criterion is asserted.",
+    "rules_used": ["r-0013-01"],
+    "error": null
+  },
+  {
+    "iteration": 15,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.3,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate retains the geometry shared by the highest-ranked samples and uses s2 = 4.30 mm, within the guidebook rule's narrowly matched starting domain. The top-ranked sample at s2 = 4.25 mm has both resonances close to their targets and both target S11 values below -15 dB; nearby evaluated settings also show useful matching, while the guidebook reports that increasing s2 across this local range tends to deepen S11 at both targets without clear resonance movement. This is a local evidence-based choice, not a claim about unmeasured performance.",
+      "rules_used": ["r-0014-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.3,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 110.61,
+      "b": 48.77,
+      "l1": 24.51,
+      "l2": 14.14,
+      "l3": 36.94,
+      "s1": 0.77,
+      "s2": 3.79,
+      "s3": 0.36,
+      "f_l": 11.77
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.8778649535721315,
+      "b": -0.30762698256080956,
+      "l1": 0.6690178838338618,
+      "l2": -0.862632313889089,
+      "l3": 0.6480612960549212,
+      "s1": -0.3384520777116413,
+      "s2": -0.6375904248227506,
+      "s3": -0.9983009063383121,
+      "f_l": 0.7700859032574374
+    },
+    "rationale": "This candidate retains the geometry shared by the highest-ranked samples and uses s2 = 4.30 mm, within the guidebook rule's narrowly matched starting domain. The top-ranked sample at s2 = 4.25 mm has both resonances close to their targets and both target S11 values below -15 dB; nearby evaluated settings also show useful matching, while the guidebook reports that increasing s2 across this local range tends to deepen S11 at both targets without clear resonance movement. This is a local evidence-based choice, not a claim about unmeasured performance.",
+    "rules_used": ["r-0014-01"],
+    "error": null
+  },
+  {
+    "iteration": 15,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.35,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate tests the upper end of the guidebook's observed s2 interval while keeping the other variables at the shared geometry of the top-ranked samples, so the coordinated trend remains applicable. The strongest evaluated result in this local family has actual resonances at 2.45 and 4.52 GHz and target S11 of -30.96 and -17.08 dB; the guidebook indicates that raising s2 toward 4.35 mm can deepen both fixed-target matches with little resonance displacement, though the measured response is not strictly monotonic. A new HFSS evaluation is needed to establish whether this setting improves either target.",
+      "rules_used": ["r-0014-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 113.64,
+      "b": 46.54,
+      "l1": 21.49,
+      "l2": 15.0,
+      "l3": 36.31,
+      "s1": 0.75,
+      "s2": 4.39,
+      "s3": 0.53,
+      "f_l": 11.49
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.27112650255851434,
+      "b": -0.8648197610250432,
+      "l1": -0.3375807668710027,
+      "l2": 0.03074401503244295,
+      "l3": 0.4356505545566445,
+      "s1": -0.48980116203329516,
+      "s2": 0.04998192762432008,
+      "s3": 0.22826723815416972,
+      "f_l": 0.4949053785448858
+    },
+    "rationale": "This candidate tests the upper end of the guidebook's observed s2 interval while keeping the other variables at the shared geometry of the top-ranked samples, so the coordinated trend remains applicable. The strongest evaluated result in this local family has actual resonances at 2.45 and 4.52 GHz and target S11 of -30.96 and -17.08 dB; the guidebook indicates that raising s2 toward 4.35 mm can deepen both fixed-target matches with little resonance displacement, though the measured response is not strictly monotonic. A new HFSS evaluation is needed to establish whether this setting improves either target.",
+    "rules_used": ["r-0014-01"],
+    "error": null
+  },
+  {
+    "iteration": 16,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.35,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design retains the common geometry shared by the highest-ranked samples, which consistently produced two detected resonances near 2.45 GHz and 4.50 GHz with both target-frequency S11 values below -15.00 dB. It increases s2 from the strong baseline value of 4.25 mm within the validated guidebook domain; the supplied rule indicates that this coordinated change tends to deepen S11 at both fixed targets while leaving resonance positions nearly stable, so it is intended to preserve the strong resonance placement while improving matching margin without claiming success before reevaluation.",
+      "rules_used": ["r-0015-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.41,
+      "b": 48.69,
+      "l1": 21.42,
+      "l2": 15.0,
+      "l3": 34.35,
+      "s1": 0.73,
+      "s2": 5.02,
+      "s3": 0.46,
+      "f_l": 11.1
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.0821983316422481,
+      "b": -0.32649188031294574,
+      "l1": -0.3600753761234219,
+      "l2": 0.7806135479327405,
+      "l3": -0.21542354159225252,
+      "s1": -0.6862517310671483,
+      "s2": 0.839265422997372,
+      "s3": -0.3020664645683575,
+      "f_l": 0.10138480007165707
+    },
+    "rationale": "This design retains the common geometry shared by the highest-ranked samples, which consistently produced two detected resonances near 2.45 GHz and 4.50 GHz with both target-frequency S11 values below -15.00 dB. It increases s2 from the strong baseline value of 4.25 mm within the validated guidebook domain; the supplied rule indicates that this coordinated change tends to deepen S11 at both fixed targets while leaving resonance positions nearly stable, so it is intended to preserve the strong resonance placement while improving matching margin without claiming success before reevaluation.",
+    "rules_used": ["r-0015-01"],
+    "error": null
+  },
+  {
+    "iteration": 16,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.33,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This second design makes a smaller increase in s2 from the same high-performing baseline geometry supported by ranks 1 through 7, where the antenna repeatedly exhibited two resonances close to the desired bands and strong fixed-target matching. The selected s2 value remains inside the narrow rule domain and follows the evidence-supported direction associated with deeper S11 at 2.45 GHz and 4.50 GHz while keeping the other variables unchanged to retain the observed dual-resonance behavior; the actual improvement must be verified by a new HFSS evaluation.",
+      "rules_used": ["r-0015-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.33,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.33,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This second design makes a smaller increase in s2 from the same high-performing baseline geometry supported by ranks 1 through 7, where the antenna repeatedly exhibited two resonances close to the desired bands and strong fixed-target matching. The selected s2 value remains inside the narrow rule domain and follows the evidence-supported direction associated with deeper S11 at 2.45 GHz and 4.50 GHz while keeping the other variables unchanged to retain the observed dual-resonance behavior; the actual improvement must be verified by a new HFSS evaluation.",
+    "rules_used": ["r-0015-01"],
+    "error": null
+  },
+  {
+    "iteration": 17,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.27,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate preserves the strongest common geometry shared by ranks 1 through 9, where two resonances consistently appear near 2.45 GHz and 4.53 GHz, while selecting an intermediate s2 value within the validated local rule domain. The top-ranked sample at s2=4.25 has deep target-frequency matching, and the guidebook indicates that increasing s2 from 4.00 toward about 4.35 tends to deepen S11 at both 2.45 and 4.50 GHz without materially moving either resonance, so s2=4.27 is a restrained local adjustment intended to retain the observed resonance positions while improving fixed-target matching; the required thresholds and frequency tolerances still require new HFSS evaluation.",
+      "rules_used": ["r-0016-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.27,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.27,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate preserves the strongest common geometry shared by ranks 1 through 9, where two resonances consistently appear near 2.45 GHz and 4.53 GHz, while selecting an intermediate s2 value within the validated local rule domain. The top-ranked sample at s2=4.25 has deep target-frequency matching, and the guidebook indicates that increasing s2 from 4.00 toward about 4.35 tends to deepen S11 at both 2.45 and 4.50 GHz without materially moving either resonance, so s2=4.27 is a restrained local adjustment intended to retain the observed resonance positions while improving fixed-target matching; the required thresholds and frequency tolerances still require new HFSS evaluation.",
+    "rules_used": ["r-0016-01"],
+    "error": null
+  },
+  {
+    "iteration": 17,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.34,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate keeps the complete high-performing baseline geometry identified across the highest-ranked samples and moves s2 closer to the upper end of the validated local improvement range. Ranks 3, 4, 5, 7, and 8 show that s2 values around 4.20 to 4.35 retain dual resonances close to the desired bands while generally producing strong S11 at both fixed targets, with the guidebook specifically supporting increased s2 as a coordinated change that tends to deepen both target responses and leave resonance positions nearly unchanged. The s2=4.34 choice is therefore intended to refine target-frequency matching while preserving the observed low resonance at approximately 2.45 GHz and bringing the high-band response toward the 4.50 GHz objective, subject to direct HFSS verification.",
+      "rules_used": ["r-0016-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.34,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 117.63,
+      "b": 47.97,
+      "l1": 19.76,
+      "l2": 14.26,
+      "l3": 34.82,
+      "s1": 0.86,
+      "s2": 4.37,
+      "s3": 0.41,
+      "f_l": 11.39
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.5267380980590501,
+      "b": -0.5067859025737573,
+      "l1": -0.9125211436804117,
+      "l2": -0.7372252348365143,
+      "l3": -0.060685446901575846,
+      "s1": 0.5787359396172003,
+      "s2": 0.042947702108800945,
+      "s3": -0.6587810776338341,
+      "f_l": 0.389327621556695
+    },
+    "rationale": "This candidate keeps the complete high-performing baseline geometry identified across the highest-ranked samples and moves s2 closer to the upper end of the validated local improvement range. Ranks 3, 4, 5, 7, and 8 show that s2 values around 4.20 to 4.35 retain dual resonances close to the desired bands while generally producing strong S11 at both fixed targets, with the guidebook specifically supporting increased s2 as a coordinated change that tends to deepen both target responses and leave resonance positions nearly unchanged. The s2=4.34 choice is therefore intended to refine target-frequency matching while preserving the observed low resonance at approximately 2.45 GHz and bringing the high-band response toward the 4.50 GHz objective, subject to direct HFSS verification.",
+    "rules_used": ["r-0016-01"],
+    "error": null
+  },
+  {
+    "iteration": 18,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.28,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This proposal preserves the geometry shared by the highest-ranked evaluated samples, where two detected resonances remain close to 2.45 GHz and 4.50 GHz and both fixed-target S11 values are below -15.00 dB. The middle-slot width is adjusted to 4.28 mm within the locally tested 4.00 to 4.35 mm range, following the guidebook trend that coordinated variation of s2 can deepen S11 at both fixed targets without a clear resonance-position shift. The choice is centered on the strong results at s2 values of 4.25 and 4.27 while retaining the demonstrated dual-resonance geometry; a new HFSS evaluation is required to verify whether the target thresholds and resonance tolerances are met.",
+      "rules_used": ["r-0017-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.28,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.28,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This proposal preserves the geometry shared by the highest-ranked evaluated samples, where two detected resonances remain close to 2.45 GHz and 4.50 GHz and both fixed-target S11 values are below -15.00 dB. The middle-slot width is adjusted to 4.28 mm within the locally tested 4.00 to 4.35 mm range, following the guidebook trend that coordinated variation of s2 can deepen S11 at both fixed targets without a clear resonance-position shift. The choice is centered on the strong results at s2 values of 4.25 and 4.27 while retaining the demonstrated dual-resonance geometry; a new HFSS evaluation is required to verify whether the target thresholds and resonance tolerances are met.",
+    "rules_used": ["r-0017-01"],
+    "error": null
+  },
+  {
+    "iteration": 18,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.34,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This proposal keeps the complete high-performing baseline geometry and moves only s2 to 4.34 mm, remaining inside the guidebook rule domain and near the evaluated 4.33 to 4.35 mm cases that produced particularly deep low-band target S11 while retaining two resonances near the desired bands. The supplied evidence indicates that s2 variation in this narrow region can improve fixed-target matching while leaving the resonance locations approximately stable, although the response is locally non-monotonic and no guaranteed improvement can be inferred. The candidate therefore probes the stronger upper portion of the observed s2 neighborhood while requiring a fresh HFSS evaluation to confirm both resonance positions and both fixed-target S11 limits.",
+      "rules_used": ["r-0017-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.34,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 111.44,
+      "b": 53.92,
+      "l1": 24.41,
+      "l2": 14.44,
+      "l3": 33.8,
+      "s1": 0.82,
+      "s2": 4.27,
+      "s3": 0.48,
+      "f_l": 11.19
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.7120890029037099,
+      "b": 0.9800445243269069,
+      "l1": 0.6383082201434513,
+      "l2": -0.5572504747128393,
+      "l3": -0.4005453133748491,
+      "s1": 0.1902721512993122,
+      "s2": -0.0847076772767712,
+      "s3": -0.15236818219406612,
+      "f_l": 0.18780564638008168
+    },
+    "rationale": "This proposal keeps the complete high-performing baseline geometry and moves only s2 to 4.34 mm, remaining inside the guidebook rule domain and near the evaluated 4.33 to 4.35 mm cases that produced particularly deep low-band target S11 while retaining two resonances near the desired bands. The supplied evidence indicates that s2 variation in this narrow region can improve fixed-target matching while leaving the resonance locations approximately stable, although the response is locally non-monotonic and no guaranteed improvement can be inferred. The candidate therefore probes the stronger upper portion of the observed s2 neighborhood while requiring a fresh HFSS evaluation to confirm both resonance positions and both fixed-target S11 limits.",
+    "rules_used": ["r-0017-01"],
+    "error": null
+  },
+  {
+    "iteration": 19,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.26,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "The highest-ranked samples use this same geometry with s2 at 4.25 and 4.27, and both report two resonances with the low valley at 2.45 GHz and strong S11 at both target frequencies. This proposal samples between those close settings while applying the local trend in r-0018-01, which associates increasing s2 with deeper target-frequency S11 and resonance positions remaining near their observed locations. The trend is not fully monotonic, so this is a focused evaluation candidate rather than a claim of improved performance.",
+      "rules_used": ["r-0018-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.26,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.26,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "The highest-ranked samples use this same geometry with s2 at 4.25 and 4.27, and both report two resonances with the low valley at 2.45 GHz and strong S11 at both target frequencies. This proposal samples between those close settings while applying the local trend in r-0018-01, which associates increasing s2 with deeper target-frequency S11 and resonance positions remaining near their observed locations. The trend is not fully monotonic, so this is a focused evaluation candidate rather than a claim of improved performance.",
+    "rules_used": ["r-0018-01"],
+    "error": null
+  },
+  {
+    "iteration": 19,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.32,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "The strongest-ranked evidence clusters around this precisely tuned geometry, and a nearby tested setting at s2 4.33 also reports two resonances close to the desired bands and target S11 below -15 dB at both frequencies. Choosing s2 4.32 explores that favorable neighborhood under r-0018-01, whose local trend suggests deeper target matching while the resonances remain near their current positions. Because the supplied response is not fully monotonic and the high-band valley is slightly above 4.50 GHz in the leading samples, this candidate needs real evaluation to determine whether it improves the match.",
+      "rules_used": ["r-0018-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.32,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.32,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "The strongest-ranked evidence clusters around this precisely tuned geometry, and a nearby tested setting at s2 4.33 also reports two resonances close to the desired bands and target S11 below -15 dB at both frequencies. Choosing s2 4.32 explores that favorable neighborhood under r-0018-01, whose local trend suggests deeper target matching while the resonances remain near their current positions. Because the supplied response is not fully monotonic and the high-band valley is slightly above 4.50 GHz in the leading samples, this candidate needs real evaluation to determine whether it improves the match.",
+    "rules_used": ["r-0018-01"],
+    "error": null
+  },
+  {
+    "iteration": 20,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.35,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "The top-ranked samples use this matched baseline and show two resonances near 2.45 and 4.50 GHz, with both fixed-target S11 values already below -15 dB. Within this exact baseline domain, r-0019-01 supports increasing s2 toward 4.35 as a trend that can deepen S11 at both targets without clear resonance movement. This candidate uses the upper end of the tested s2 range, where the highest-ranked samples show strong target matching, while retaining the other variables associated with the best observed results; it is intended to refine target matching, not to assume an unmeasured improvement.",
+      "rules_used": ["r-0019-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 112.54,
+      "b": 46.19,
+      "l1": 21.69,
+      "l2": 15.0,
+      "l3": 37.55,
+      "s1": 0.79,
+      "s2": 4.94,
+      "s3": 0.5,
+      "f_l": 11.44
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.4915736274495437,
+      "b": -0.9536531345955801,
+      "l1": -0.2715056741390689,
+      "l2": 0.20012215475385875,
+      "l3": 0.8511835960048841,
+      "s1": -0.11292869002860839,
+      "s2": 0.7330957232976936,
+      "s3": 0.02543002781522663,
+      "f_l": 0.44374431931160396
+    },
+    "rationale": "The top-ranked samples use this matched baseline and show two resonances near 2.45 and 4.50 GHz, with both fixed-target S11 values already below -15 dB. Within this exact baseline domain, r-0019-01 supports increasing s2 toward 4.35 as a trend that can deepen S11 at both targets without clear resonance movement. This candidate uses the upper end of the tested s2 range, where the highest-ranked samples show strong target matching, while retaining the other variables associated with the best observed results; it is intended to refine target matching, not to assume an unmeasured improvement.",
+    "rules_used": ["r-0019-01"],
+    "error": null
+  },
+  {
+    "iteration": 20,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "The exact baseline with s2 at 4.00 has two detected resonances near the targets, and its target S11 values meet the -15 dB threshold, though they are less deep than several higher-ranked samples with larger s2. This candidate preserves that measured baseline as a comparison point while applying r-0019-02 by increasing l3 within its supported starting domain toward 37.50 mm; the guidebook suggests this may lower the low resonance and make both target matches shallower, so the tradeoff is uncertain and the high-band position is expected to remain near its starting point. It provides a bounded test of that coordinated trend against the stronger s2-focused candidate without claiming either outcome in advance.",
+      "rules_used": ["r-0019-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 118.19,
+      "b": 49.13,
+      "l1": 22.26,
+      "l2": 14.47,
+      "l3": 33.52,
+      "s1": 0.81,
+      "s2": 3.59,
+      "s3": 0.58,
+      "f_l": 11.52
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.6374943259034436,
+      "b": -0.21667364297446245,
+      "l1": -0.08107903553650497,
+      "l2": -0.5332524235682947,
+      "l3": -0.4932482509949381,
+      "s1": 0.05704861624588764,
+      "s2": -0.5124271237460962,
+      "s3": 0.6037763412404402,
+      "f_l": 0.5213608357180675
+    },
+    "rationale": "The exact baseline with s2 at 4.00 has two detected resonances near the targets, and its target S11 values meet the -15 dB threshold, though they are less deep than several higher-ranked samples with larger s2. This candidate preserves that measured baseline as a comparison point while applying r-0019-02 by increasing l3 within its supported starting domain toward 37.50 mm; the guidebook suggests this may lower the low resonance and make both target matches shallower, so the tradeoff is uncertain and the high-band position is expected to remain near its starting point. It provides a bounded test of that coordinated trend against the stronger s2-focused candidate without claiming either outcome in advance.",
+    "rules_used": ["r-0019-02"],
+    "error": null
+  },
+  {
+    "iteration": 21,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.24,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate preserves the strongest dual-resonance geometry shared by the highest-ranked samples, where the detected valleys are already near 2.45 GHz and 4.52 GHz and both fixed-target S11 values are comfortably below -15.00 dB. The s2 value is placed just below the rank-1 setting of 4.25 mm and within the locally well-performing 4.20-4.35 mm sweep, applying the guidebook trend that increasing s2 from the 4.00 mm baseline tends to deepen S11 at both targets while causing little resonance movement. This small local perturbation is intended to probe whether target matching can improve without disturbing the established resonance positions, subject to confirmation by a new HFSS evaluation.",
+      "rules_used": ["r-0020-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.24,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.24,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate preserves the strongest dual-resonance geometry shared by the highest-ranked samples, where the detected valleys are already near 2.45 GHz and 4.52 GHz and both fixed-target S11 values are comfortably below -15.00 dB. The s2 value is placed just below the rank-1 setting of 4.25 mm and within the locally well-performing 4.20-4.35 mm sweep, applying the guidebook trend that increasing s2 from the 4.00 mm baseline tends to deepen S11 at both targets while causing little resonance movement. This small local perturbation is intended to probe whether target matching can improve without disturbing the established resonance positions, subject to confirmation by a new HFSS evaluation.",
+    "rules_used": ["r-0020-01"],
+    "error": null
+  },
+  {
+    "iteration": 21,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.26,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate retains the complete geometry of the top-ranked dual-band cluster, including the observed low resonance at 2.45 GHz and high resonance near 4.52 GHz, while making a small upward s2 perturbation from the strongest 4.25 mm result. The ranked samples show that the baseline geometry remains effective across nearby s2 values, and the guidebook identifies increasing s2 from 4.00 mm as the most direct supported action for potentially deepening S11 at both 2.45 GHz and 4.50 GHz with minimal resonance displacement. The 4.26 mm setting therefore tests the opposite side of the local optimum neighborhood for improved fixed-target matching without asserting an outcome before HFSS evaluation.",
+      "rules_used": ["r-0020-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.26,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 116.35,
+      "b": 49.23,
+      "l1": 19.56,
+      "l2": 15.0,
+      "l3": 32.18,
+      "s1": 0.76,
+      "s2": 4.81,
+      "s3": 0.63,
+      "f_l": 11.3
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.27052220346487443,
+      "b": -0.19357635472054868,
+      "l1": -0.9814708898640012,
+      "l2": 0.2183617474028785,
+      "l3": -0.9412273235183328,
+      "s1": -0.36672232438836816,
+      "s2": 0.6856983559629413,
+      "s3": 0.9264704851402594,
+      "f_l": 0.2986043508485541
+    },
+    "rationale": "This candidate retains the complete geometry of the top-ranked dual-band cluster, including the observed low resonance at 2.45 GHz and high resonance near 4.52 GHz, while making a small upward s2 perturbation from the strongest 4.25 mm result. The ranked samples show that the baseline geometry remains effective across nearby s2 values, and the guidebook identifies increasing s2 from 4.00 mm as the most direct supported action for potentially deepening S11 at both 2.45 GHz and 4.50 GHz with minimal resonance displacement. The 4.26 mm setting therefore tests the opposite side of the local optimum neighborhood for improved fixed-target matching without asserting an outcome before HFSS evaluation.",
+    "rules_used": ["r-0020-01"],
+    "error": null
+  },
+  {
+    "iteration": 22,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.29,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This proposal preserves the geometry shared by the highest-ranked samples, where two resonances were detected near 2.45 GHz and 4.52 to 4.53 GHz and both fixed-target S11 values were stronger than the required threshold. It makes a small upward adjustment to s2 within the locally supported 4.00 to 4.35 mm range, following rule r-0021-01 because the nearby ranked samples indicate that this coordinated local change can deepen S11 at both target frequencies without a clear resonance-position shift. The new value samples the favorable region near the strongest observed s2 settings while allowing a fresh HFSS evaluation rather than assuming the result.",
+      "rules_used": ["r-0021-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.29,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.29,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This proposal preserves the geometry shared by the highest-ranked samples, where two resonances were detected near 2.45 GHz and 4.52 to 4.53 GHz and both fixed-target S11 values were stronger than the required threshold. It makes a small upward adjustment to s2 within the locally supported 4.00 to 4.35 mm range, following rule r-0021-01 because the nearby ranked samples indicate that this coordinated local change can deepen S11 at both target frequencies without a clear resonance-position shift. The new value samples the favorable region near the strongest observed s2 settings while allowing a fresh HFSS evaluation rather than assuming the result.",
+    "rules_used": ["r-0021-01"],
+    "error": null
+  },
+  {
+    "iteration": 22,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.31,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This proposal also retains the geometry associated with the top-ranked dual-resonance results, including the measured low resonance at 2.45 GHz and the high resonance close to 4.50 GHz, while exploring a slightly larger middle-slot width. Rule r-0021-01 supports increasing s2 over this local domain as a trend toward deeper S11 at 2.45 and 4.50 GHz with no clear movement of the detected resonance positions; the ranked evidence shows particularly good target matching throughout nearby s2 values around 4.25 to 4.30 mm. The 4.31 mm setting is a nearby, legal interpolation intended to test whether matching depth can improve while preserving the demonstrated resonance placement, without claiming success before evaluation.",
+      "rules_used": ["r-0021-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.31,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.31,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This proposal also retains the geometry associated with the top-ranked dual-resonance results, including the measured low resonance at 2.45 GHz and the high resonance close to 4.50 GHz, while exploring a slightly larger middle-slot width. Rule r-0021-01 supports increasing s2 over this local domain as a trend toward deeper S11 at 2.45 and 4.50 GHz with no clear movement of the detected resonance positions; the ranked evidence shows particularly good target matching throughout nearby s2 values around 4.25 to 4.30 mm. The 4.31 mm setting is a nearby, legal interpolation intended to test whether matching depth can improve while preserving the demonstrated resonance placement, without claiming success before evaluation.",
+    "rules_used": ["r-0021-01"],
+    "error": null
+  },
+  {
+    "iteration": 23,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.35,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This proposal follows the strongest local geometry cluster in ranks 1 through 16, where a=115.00, b=50.00, l1=22.50, l2=15.00, l3=35.00, s1=0.80, s3=0.50, and f_l=11.00 consistently produced two detected resonances near the low-band target and around 4.52 to 4.54 GHz. Increasing s2 within the observed local sweep improved fixed-target S11, with the deepest low-band and strong high-band values appearing near s2=4.33 to 4.35, so s2=4.35 is selected to emphasize target-frequency matching while preserving the established dual-resonance geometry. A new HFSS evaluation is still required to verify the actual resonance positions and both fixed-target thresholds.",
+      "rules_used": ["r-0022-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 110.2,
+      "b": 49.9,
+      "l1": 22.69,
+      "l2": 14.43,
+      "l3": 34.13,
+      "s1": 0.84,
+      "s2": 4.68,
+      "s3": 0.61,
+      "f_l": 10.07
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.9594542188622617,
+      "b": -0.02384391761697091,
+      "l1": 0.06399172792470353,
+      "l2": -0.5687465111650207,
+      "l3": -0.2883753062136436,
+      "s1": 0.4394463567805089,
+      "s2": 0.41694940760397814,
+      "s3": 0.7683120722817811,
+      "f_l": -0.9302266369765793
+    },
+    "rationale": "This proposal follows the strongest local geometry cluster in ranks 1 through 16, where a=115.00, b=50.00, l1=22.50, l2=15.00, l3=35.00, s1=0.80, s3=0.50, and f_l=11.00 consistently produced two detected resonances near the low-band target and around 4.52 to 4.54 GHz. Increasing s2 within the observed local sweep improved fixed-target S11, with the deepest low-band and strong high-band values appearing near s2=4.33 to 4.35, so s2=4.35 is selected to emphasize target-frequency matching while preserving the established dual-resonance geometry. A new HFSS evaluation is still required to verify the actual resonance positions and both fixed-target thresholds.",
+    "rules_used": ["r-0022-01"],
+    "error": null
+  },
+  {
+    "iteration": 23,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.8,
+        "l2": 15.0,
+        "l3": 35.3,
+        "s1": 0.78,
+        "s2": 4.3,
+        "s3": 0.55,
+        "f_l": 10.9
+      },
+      "rationale": "This proposal starts from the best-ranked local geometry and applies the coordinated direction in r-0022-03: slightly increasing l1 and l3, narrowing s1, widening s2 and s3, and shortening f_l while keeping a, b, and l2 fixed. The ranked evidence shows that the baseline family already maintains a strong low resonance near 2.45 GHz, while the lower-ranked coordinated variants demonstrate that this type of combined perturbation can move the high resonance downward toward 4.50 GHz, although the guidebook explicitly identifies the effect as confounded and suggests shallower high-band S11. The changes are therefore kept modest to seek improved high-band resonance placement without abandoning the strong local dual-band response, with final performance requiring a new HFSS evaluation.",
+      "rules_used": ["r-0022-03"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.8,
+      "l2": 15.0,
+      "l3": 35.3,
+      "s1": 0.78,
+      "s2": 4.3,
+      "s3": 0.55,
+      "f_l": 10.9
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.8,
+      "l2": 15.0,
+      "l3": 35.3,
+      "s1": 0.78,
+      "s2": 4.3,
+      "s3": 0.55,
+      "f_l": 10.9
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This proposal starts from the best-ranked local geometry and applies the coordinated direction in r-0022-03: slightly increasing l1 and l3, narrowing s1, widening s2 and s3, and shortening f_l while keeping a, b, and l2 fixed. The ranked evidence shows that the baseline family already maintains a strong low resonance near 2.45 GHz, while the lower-ranked coordinated variants demonstrate that this type of combined perturbation can move the high resonance downward toward 4.50 GHz, although the guidebook explicitly identifies the effect as confounded and suggests shallower high-band S11. The changes are therefore kept modest to seek improved high-band resonance placement without abandoning the strong local dual-band response, with final performance requiring a new HFSS evaluation.",
+    "rules_used": ["r-0022-03"],
+    "error": null
+  },
+  {
+    "iteration": 24,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.35,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This design preserves the strongest dual-resonance baseline geometry from the highest-ranked samples, where the detected resonances were at 2.45 GHz and approximately 4.52 GHz and both fixed-target S11 values were below -15 dB. It increases s2 to the upper end of the locally supported range because the aligned samples show deeper S11 at both 2.45 GHz and 4.50 GHz as s2 increases toward 4.35 mm, while the resonance positions remain close to the target bands. The guidebook identifies this coordinated single-variable change as an evidence-supported trend, although the actual resonance and S11 outcomes require HFSS evaluation.",
+      "rules_used": ["r-0023-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.35,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 110.99,
+      "b": 46.45,
+      "l1": 20.23,
+      "l2": 15.0,
+      "l3": 37.42,
+      "s1": 0.82,
+      "s2": 4.2,
+      "s3": 0.57,
+      "f_l": 11.5
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.802842068073131,
+      "b": -0.8876583351840248,
+      "l1": -0.7569753925680522,
+      "l2": 0.15407058894158965,
+      "l3": 0.8082728790759588,
+      "s1": 0.1958996692883479,
+      "s2": -0.18769838605254896,
+      "s3": 0.5069502693604315,
+      "f_l": 0.4959889035002565
+    },
+    "rationale": "This design preserves the strongest dual-resonance baseline geometry from the highest-ranked samples, where the detected resonances were at 2.45 GHz and approximately 4.52 GHz and both fixed-target S11 values were below -15 dB. It increases s2 to the upper end of the locally supported range because the aligned samples show deeper S11 at both 2.45 GHz and 4.50 GHz as s2 increases toward 4.35 mm, while the resonance positions remain close to the target bands. The guidebook identifies this coordinated single-variable change as an evidence-supported trend, although the actual resonance and S11 outcomes require HFSS evaluation.",
+    "rules_used": ["r-0023-01"],
+    "error": null
+  },
+  {
+    "iteration": 24,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.33,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate retains the common geometry shared by the top-ranked dual-resonant samples and uses an intermediate s2 value near the strongest observed local region. The evaluated samples show that increasing s2 from 4.00 mm through approximately 4.33 to 4.35 mm is associated with deeper fixed-target S11 at both bands, with the low resonance remaining near 2.45 to 2.46 GHz and the high resonance near 4.52 to 4.54 GHz. Using 4.33 mm provides a nearby probe of that supported trend while remaining inside the guidebook domain and allowing the new evaluation to test whether target matching improves without assuming a guaranteed result.",
+      "rules_used": ["r-0023-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.33,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 112.45,
+      "b": 50.91,
+      "l1": 22.22,
+      "l2": 15.0,
+      "l3": 34.69,
+      "s1": 0.75,
+      "s2": 4.63,
+      "s3": 0.62,
+      "f_l": 10.3
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.5108024634110984,
+      "b": 0.22779510346846754,
+      "l1": -0.09222798178918246,
+      "l2": 0.5688180009433716,
+      "l3": -0.1045449244324208,
+      "s1": -0.47864481184438334,
+      "s2": 0.3736726214434214,
+      "s3": 0.853910965187288,
+      "f_l": -0.7005655698907709
+    },
+    "rationale": "This candidate retains the common geometry shared by the top-ranked dual-resonant samples and uses an intermediate s2 value near the strongest observed local region. The evaluated samples show that increasing s2 from 4.00 mm through approximately 4.33 to 4.35 mm is associated with deeper fixed-target S11 at both bands, with the low resonance remaining near 2.45 to 2.46 GHz and the high resonance near 4.52 to 4.54 GHz. Using 4.33 mm provides a nearby probe of that supported trend while remaining inside the guidebook domain and allowing the new evaluation to test whether target matching improves without assuming a guaranteed result.",
+    "rules_used": ["r-0023-01"],
+    "error": null
+  },
+  {
+    "iteration": 25,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.25,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate stays at the strongest matched baseline geometry identified across ranks 1 through 16 and selects an intermediate s2 value within the locally effective 4.00 to 4.35 mm region. The evaluated s2 sweep shows that coordinated adjustment of s2 can preserve the two-resonance structure while generally deepening both fixed-target S11 values, and the 4.25 mm setting is close to the highest-ranked 4.25 mm sample while retaining the observed low-band resonance at 2.45 GHz and a high-band resonance near 4.52 GHz. It is therefore a focused local refinement aimed at maintaining the strong 2.45 GHz match and improving the 4.50 GHz match without changing variables that already perform well.",
+      "rules_used": ["r-0024-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.25,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.77,
+      "b": 47.5,
+      "l1": 24.54,
+      "l2": 14.78,
+      "l3": 37.09,
+      "s1": 0.81,
+      "s2": 4.54,
+      "s3": 0.57,
+      "f_l": 11.5
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": 0.1547657963561213,
+      "b": -0.6256951010844682,
+      "l1": 0.6812302049914452,
+      "l2": -0.21602721069629394,
+      "l3": 0.6979723229290682,
+      "s1": 0.10292003472209621,
+      "s2": 0.3621279171306251,
+      "s3": 0.508033042442136,
+      "f_l": 0.4964008871897301
+    },
+    "rationale": "This candidate stays at the strongest matched baseline geometry identified across ranks 1 through 16 and selects an intermediate s2 value within the locally effective 4.00 to 4.35 mm region. The evaluated s2 sweep shows that coordinated adjustment of s2 can preserve the two-resonance structure while generally deepening both fixed-target S11 values, and the 4.25 mm setting is close to the highest-ranked 4.25 mm sample while retaining the observed low-band resonance at 2.45 GHz and a high-band resonance near 4.52 GHz. It is therefore a focused local refinement aimed at maintaining the strong 2.45 GHz match and improving the 4.50 GHz match without changing variables that already perform well.",
+    "rules_used": ["r-0024-01"],
+    "error": null
+  },
+  {
+    "iteration": 25,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.6,
+        "l2": 15.0,
+        "l3": 35.1,
+        "s1": 0.79,
+        "s2": 4.3,
+        "s3": 0.52,
+        "f_l": 10.95
+      },
+      "rationale": "This candidate applies the low-confidence coordinated interaction observed in the nearby rank-17 comparison, using slightly longer l1 and l3, narrower s1, wider s2 and s3, and a slightly shorter feed line while keeping the highly effective 115.00 by 50.00 mm baseline. The supplied comparison indicates that this direction can move both detected resonance valleys lower, which is useful for bringing the observed high resonance near 4.52 to 4.50 GHz, although it may also move the low resonance below 2.45 GHz and make the fixed-target matches shallower. The perturbation is kept smaller than the observed variant to seek a controlled frequency correction while retaining the dual-resonance geometry, and the s2 increase also follows the stronger local evidence for deeper fixed-target S11.",
+      "rules_used": ["r-0024-01", "r-0024-03"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.6,
+      "l2": 15.0,
+      "l3": 35.1,
+      "s1": 0.79,
+      "s2": 4.3,
+      "s3": 0.52,
+      "f_l": 10.95
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.6,
+      "l2": 15.0,
+      "l3": 35.1,
+      "s1": 0.79,
+      "s2": 4.3,
+      "s3": 0.52,
+      "f_l": 10.95
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate applies the low-confidence coordinated interaction observed in the nearby rank-17 comparison, using slightly longer l1 and l3, narrower s1, wider s2 and s3, and a slightly shorter feed line while keeping the highly effective 115.00 by 50.00 mm baseline. The supplied comparison indicates that this direction can move both detected resonance valleys lower, which is useful for bringing the observed high resonance near 4.52 to 4.50 GHz, although it may also move the low resonance below 2.45 GHz and make the fixed-target matches shallower. The perturbation is kept smaller than the observed variant to seek a controlled frequency correction while retaining the dual-resonance geometry, and the s2 increase also follows the stronger local evidence for deeper fixed-target S11.",
+    "rules_used": ["r-0024-01", "r-0024-03"],
+    "error": null
+  }
+]

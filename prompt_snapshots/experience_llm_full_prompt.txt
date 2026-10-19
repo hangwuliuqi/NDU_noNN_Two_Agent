@@ -1,0 +1,272 @@
+# role
+
+you are the experience summary module in a closed-loop dual-band antenna optimization system.
+
+# objective
+
+infer the latest complete variable design guidebook from the score-ranked TOP-Q evaluated samples and the previous active guidebook rules. use the numerical geometry, actual resonance metrics, target-frequency s11 values, ranking scores, and existing rules as evidence. return the complete next guidebook snapshot: retain supported rules, revise rules when the evidence changes their domain or direction, remove unsupported rules, and add new rules only when the evidence supports them. sample rows contain only their rank for comparison; provenance and persistent identifiers are intentionally withheld. The ranking score combines actual resonance-position quality with target-frequency S11 quality, while the physical stopping conditions are stated separately below.
+
+return the complete rule snapshot that should be used by the sampling guidance module in the next iteration. review the previous active rules, retain or revise only those still justified, remove unsupported rules, and add new rules only when the supplied evidence warrants them. return at most 8 rules. code validates and immediately publishes this snapshot; it does not maintain a separate evidence ledger or automatically change confidence.
+
+# legal variable ranges
+
+interpret every design using these configured closed intervals:
+
+- `a`: [100.00, 150.00] mm; substrate length.
+- `b`: [40.00, 80.00] mm; substrate width.
+- `l1`: [15.00, 45.00] mm; upper slot length.
+- `l2`: [5.00, 15.00] mm; middle slot length.
+- `l3`: [15.00, 45.00] mm; lower slot length.
+- `s1`: [0.50, 1.50] mm; upper slot width.
+- `s2`: [2.00, 10.00] mm; middle slot width.
+- `s3`: [0.20, 1.60] mm; lower slot width.
+- `f_l`: [5.00, 15.00] mm; feed-line length.
+
+# ranking score and physical stopping conditions
+
+the code computes a ranking-only score R; it does not decide success:
+q_r1 = exp(-abs(r1 - 2.45) / 0.05)
+q_r2 = exp(-abs(r2 - 4.50) / 0.05)
+q_f = (q_r1 + q_r2) / 2
+q_band(s) = clip((-s) / abs(-20.00), 0, 1)
+q_s = 0.500000 * q_band(s11_at_2_45) + 0.500000 * q_band(s11_at_4_50)
+R = 0.600000 * q_f + 0.400000 * q_s
+Here r1 and r2 are the first and second frequency-ordered detector slots. When a slot is missing, the code stores 0.00 GHz internally for score calculation; this placeholder is not a real resonance and is omitted from the displayed res list. With one detected resonance, do not assume it belongs to the low band: n_res and res identify the actual evidence, while r1/r2 are only the stored score slots. The values s11_at_2_45 and s11_at_4_50 are S11 interpolated at the fixed target frequencies, not at resonance minima. R is used only for ranking and TOP-Q selection; success is checked directly by the physical conditions below.
+
+# code-controlled stopping condition
+
+only the code decides whether optimization stops after a real hfss evaluation. it stops only when the detector finds two independent resonances, the lower resonance is within 0.00 ghz of 2.45 ghz, the higher resonance is within 0.00 ghz of 4.50 ghz, s11 at the fixed 2.45 ghz target is at most -10.00 db, and s11 at the fixed 4.50 ghz target is at most -10.00 db. R is only a ranking score and is not a success condition. the llm must never claim that a proposed candidate already satisfies the stopping condition.
+
+# how to read an evaluated sample
+
+compact sample contract:
+- one complete evaluated sample occupies one line. `+` only separates sections; it is not arithmetic addition.
+- `rank:n` is the sample's position after sorting the available evaluated samples by ranking score `R` from highest to lowest. `rank:1` is the highest-ranked sample, `rank:2` is the second highest, and a smaller rank number is better. rank is comparative, not a persistent sample identifier.
+- `geom={a:value,b:value,l1:value,l2:value,l3:value,s1:value,s2:value,s3:value,f_l:value}` is the evaluated antenna geometry in mm: `a`=substrate length, `b`=substrate width, `l1`=upper slot length, `l2`=middle slot length, `l3`=lower slot length, `s1`=upper slot width, `s2`=middle slot width, `s3`=lower slot width, and `f_l`=feed-line length. every value is continuous; no low/mid/high category is implied.
+- `n_res` is the number of valid resonances detected from the complete measured s11 curve after the configured prominence, separation, and saddle checks. it is exactly 0, 1, or 2 and must equal the number of pairs in `res`.
+- `res` contains the detected actual resonance valleys. each pair is `[resonance_frequency_ghz,s11_at_that_resonance_db]`. a more-negative second value means a deeper resonance valley. when two pairs exist they are ordered by increasing frequency.
+- the valid resonance forms are `{n_res:0} + {res:[]}`, `{n_res:1} + {res:[[f1,s11_1]]}`, and `{n_res:2} + {res:[[f1,s11_1],[f2,s11_2]]}`. for `n_res:1`, the sole resonance is not automatically assigned to the low band; compare its frequency with both 2.45 ghz and 4.50 ghz. absent resonances are omitted, not represented by physical zero values, and must not be invented.
+- `target_s11={2.45:s_low,4.50:s_high}` contains s11 linearly interpolated at the two fixed target frequencies. these values drive the numerical score and are distinct from resonance-valley depths in `res`. at either target, a more-negative value is better; a value at or below -10.00 db satisfies that band's matching threshold.
+- `score:R` is used only for ranking. The detector stores the first and second frequency-ordered resonance slots as `r1` and `r2`; when two resonances exist, `r1` is the lower-frequency detected valley and `r2` is the higher-frequency detected valley. A missing slot is stored internally as `0.00 GHz` only so the ranking formula can be evaluated; this placeholder is not a measured or physical resonance and is omitted from `res`. The frequency quality is `q_r1=exp(-abs(r1-2.45)/0.05)`, `q_r2=exp(-abs(r2-4.50)/0.05)`, and `q_f=(q_r1+q_r2)/2`. If there is only one detected resonance, do not assume it belongs to the low band: `r1` is simply the one detected slot, `r2` is the missing-slot placeholder, and `n_res` plus `res` remain the authoritative evidence about what was detected. The target-frequency S11 quality is `q_s=0.500000*q_band(s_low)+0.500000*q_band(s_high)`, where `q_band(s)=clip((-s)/abs(-20.00),0,1)`. Here `s_low` and `s_high` are S11 values interpolated at the fixed target frequencies, not at the actual resonance minima. Finally `R=0.600000*q_f+0.400000*q_s`. R is not a success condition.
+- complete example: `{rank:1} + {geom:{a:125.00,b:60.00,l1:30.00,l2:10.00,l3:30.00,s1:1.00,s2:5.00,s3:0.90,f_l:10.00}} + {n_res:2} + {res:[[2.48,-15.40],[4.47,-15.70]]} + {target_s11:{2.45:-12.80,4.50:-13.90}} + {score:0.667500}`.
+
+# experience rule format
+
+experience guidebook rule contract:
+ - the response is the complete latest guidebook snapshot, not an append-only list. review the previous guidebook rules against the supplied score-ranked TOP-Q evaluated samples: retain a rule only when still justified, revise it when the evidence supports a narrower or different statement, remove it by omitting it, and add a new rule only when evidence supports it.
+- `summary` is a short evidence-bounded assessment of the complete returned snapshot.
+- every item in `rules` is one coordinated qualitative trend. the experience llm outputs `domain`, `var_change`, `effect`, `confidence`, and `note`; code later assigns the internal `rule` id, provenance `source`, and `created_iteration`.
+- `domain` describes the starting-geometry region where the trend may apply. use `global` only when the supplied evidence supports no narrower domain. otherwise use one or more lowercase variables with inclusive continuous bounds, for example `{"l1":{"min":26.40,"max":34.20},"s1":{"min":0.55,"max":0.88}}`. every bound must stay inside the legal range. variables omitted from `domain` are unrestricted by that rule.
+- `var_change` is one coordinated proposed change, not a set of independent causal claims. each included variable uses `u`=increase, `d`=decrease, or `k`=keep approximately unchanged. include only variables needed to state the supported interaction.
+- `effect` must contain exactly four fields. `low_resonance_point` and `high_resonance_point` use `l`=the numerical resonance frequency moves lower, `h`=it moves higher, or `k`=no clear meaningful movement. these symbols describe direction, not whether the move is closer to the target.
+- `s11_at_2_45` and `s11_at_4_50` describe s11 at the fixed targets 2.45 ghz and 4.50 ghz. they use `d`=deeper/more negative, `s`=shallower/less negative, or `k`=no clear meaningful depth change. a missing resonance is unknown evidence and must never be translated into `k`.
+- `confidence` is the llm's direct evidence-strength assessment from 0.00 through 0.99, not a probability calculated by code. use a low value for sparse, distant, or confounded comparisons and a higher value only for repeated, nearby, consistent real-HFSS comparisons. never use 1.00.
+- `note` is a concise human-readable statement of the coordinated change, all four expected effects, the supported domain, and important evidence limitations. do not claim a universal physical law or certainty.
+- complete example: `domain={l1:{min:26.40,max:34.20},s1:{min:0.55,max:0.88}}`; `var_change={l1:u,s1:d}`; `effect={low_resonance_point:h,s11_at_2_45:d,high_resonance_point:l,s11_at_4_50:s}`; `confidence=0.68`. this means that, only for starting designs in the stated domain, increasing `l1` while decreasing `s1` is hypothesized to move the low resonance to a numerically higher frequency, deepen s11 at 2.45 ghz, move the high resonance to a numerically lower frequency, and make s11 at 4.50 ghz shallower.
+
+# critical reasoning constraints
+
+- ranking or correlation alone does not prove causality.
+- when evidence is weak, return fewer rules or an empty rule list.
+- prefer coordinated changes supported by comparisons among nearby samples.
+- use only these lowercase variable names: `a`, `b`, `l1`, `l2`, `l3`, `s1`, `s2`, `s3`, `f_l`.
+- `domain` is either `global` or an object that gives a continuous closed starting range for each relevant variable as `{"min":value,"max":value}`.
+- domain boundaries must remain within the legal variable ranges and must be supported by the supplied continuous-valued evidence. do not recreate fixed low/mid/high partitions.
+- `u`, `d`, and `k` mean increase, decrease, and keep approximately unchanged.
+- for `low_resonance_point` and `high_resonance_point`, use only `l`, `h`, or `k`: `l` means the numerical resonance frequency moves lower, `h` means it moves higher, and `k` means no clear meaningful frequency movement.
+- for `s11_at_2_45` and `s11_at_4_50`, use only `d`, `s`, or `k`: `d` means the fixed-target s11 becomes deeper/more negative, `s` means it becomes shallower/less negative, and `k` means no clear meaningful depth change.
+- every rule must contain all four required effect metrics.
+- missing resonance cannot be interpreted as `k`.
+- confidence must be between 0 and 1; never use 1.00. this is your direct, evidence-bounded assessment, not a code-computed probability. use low values when comparisons are sparse or confounded; reserve high values for repeated, consistent, nearby real-hfss comparisons.
+- returned rules are hypotheses. code assigns internal identifiers after the response; code does not calculate, upgrade, or downgrade confidence.
+- infer trends only from the numerical geometry and measured metrics in the supplied score-ranked TOP-Q sample lines.
+- use `previous_active_rules` to determine whether the evidence suggests a new rule, supports an existing direction, or conflicts with an existing direction.
+
+# TOP-Q evaluated samples
+
+each following line is one score-ranked evaluated sample from TOP-Q. persistent identifiers and provenance are intentionally omitted:
+
+{rank:1} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.90,s3:0.50,f_l:10.38}} + {n_res:2} + {res:[[2.46,-27.48],[4.50,-23.90]]} + {target_s11:{2.45:-26.25,4.50:-23.90}} + {score:0.945619}
+{rank:2} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.95,s3:0.50,f_l:10.25}} + {n_res:2} + {res:[[2.45,-27.35],[4.49,-24.70]]} + {target_s11:{2.45:-27.35,4.50:-24.40}} + {score:0.945619}
+{rank:3} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.92,s3:0.50,f_l:10.43}} + {n_res:2} + {res:[[2.46,-26.61],[4.50,-23.88]]} + {target_s11:{2.45:-26.48,4.50:-23.88}} + {score:0.945619}
+{rank:4} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.98,s3:0.50,f_l:10.40}} + {n_res:2} + {res:[[2.45,-27.13],[4.49,-25.77]]} + {target_s11:{2.45:-27.13,4.50:-25.56}} + {score:0.945619}
+{rank:5} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:5.00,s3:0.50,f_l:10.31}} + {n_res:2} + {res:[[2.45,-27.45],[4.48,-27.31]]} + {target_s11:{2.45:-27.45,4.50:-26.51}} + {score:0.901096}
+{rank:6} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.80,s3:0.50,f_l:10.50}} + {n_res:2} + {res:[[2.46,-30.20],[4.49,-23.14]]} + {target_s11:{2.45:-29.83,4.50:-23.01}} + {score:0.891238}
+{rank:7} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.90,s3:0.50,f_l:10.43}} + {n_res:2} + {res:[[2.46,-28.84],[4.49,-24.95]]} + {target_s11:{2.45:-26.38,4.50:-24.66}} + {score:0.891238}
+{rank:8} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:5.00,s3:0.50,f_l:10.35}} + {n_res:2} + {res:[[2.46,-27.26],[4.49,-25.29]]} + {target_s11:{2.45:-25.84,4.50:-25.17}} + {score:0.891238}
+{rank:9} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:34.90,s1:0.80,s2:5.00,s3:0.50,f_l:10.30}} + {n_res:2} + {res:[[2.46,-26.68],[4.49,-25.21]]} + {target_s11:{2.45:-24.88,4.50:-24.98}} + {score:0.891238}
+{rank:10} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:34.90,s1:0.80,s2:5.00,s3:0.50,f_l:10.35}} + {n_res:2} + {res:[[2.46,-26.15],[4.49,-24.57]]} + {target_s11:{2.45:-26.06,4.50:-24.32}} + {score:0.891238}
+{rank:11} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.10,s1:0.80,s2:4.88,s3:0.50,f_l:10.44}} + {n_res:2} + {res:[[2.44,-30.10],[4.49,-24.20]]} + {target_s11:{2.45:-26.47,4.50:-24.10}} + {score:0.891238}
+{rank:12} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.90,s3:0.50,f_l:10.40}} + {n_res:2} + {res:[[2.44,-28.29],[4.49,-22.24]]} + {target_s11:{2.45:-26.97,4.50:-22.15}} + {score:0.891238}
+{rank:13} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:5.00,s3:0.50,f_l:10.28}} + {n_res:2} + {res:[[2.44,-26.97],[4.49,-25.92]]} + {target_s11:{2.45:-26.13,4.50:-25.53}} + {score:0.891238}
+{rank:14} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.97,s3:0.50,f_l:10.41}} + {n_res:2} + {res:[[2.44,-28.30],[4.49,-25.04]]} + {target_s11:{2.45:-25.82,4.50:-24.77}} + {score:0.891238}
+{rank:15} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.10,s1:0.80,s2:5.00,s3:0.50,f_l:10.35}} + {n_res:2} + {res:[[2.44,-26.92],[4.49,-25.89]]} + {target_s11:{2.45:-25.72,4.50:-25.79}} + {score:0.891238}
+{rank:16} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.15,s1:0.80,s2:4.87,s3:0.50,f_l:10.42}} + {n_res:2} + {res:[[2.44,-29.83],[4.49,-23.38]]} + {target_s11:{2.45:-27.33,4.50:-23.17}} + {score:0.891238}
+{rank:17} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:5.00,s3:0.50,f_l:10.30}} + {n_res:2} + {res:[[2.46,-26.88],[4.48,-26.56]]} + {target_s11:{2.45:-25.37,4.50:-25.76}} + {score:0.846715}
+{rank:18} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.20,s1:0.80,s2:4.90,s3:0.50,f_l:10.45}} + {n_res:2} + {res:[[2.43,-30.10],[4.49,-24.28]]} + {target_s11:{2.45:-23.09,4.50:-24.13}} + {score:0.846715}
+{rank:19} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.20,s1:0.80,s2:4.85,s3:0.50,f_l:10.45}} + {n_res:2} + {res:[[2.43,-29.42],[4.49,-23.07]]} + {target_s11:{2.45:-22.66,4.50:-22.89}} + {score:0.846715}
+{rank:20} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.95,s3:0.50,f_l:10.35}} + {n_res:2} + {res:[[2.43,-27.82],[4.49,-24.61]]} + {target_s11:{2.45:-24.42,4.50:-24.55}} + {score:0.846715}
+{rank:21} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.90,s3:0.50,f_l:10.45}} + {n_res:2} + {res:[[2.44,-29.42],[4.48,-24.99]]} + {target_s11:{2.45:-26.15,4.50:-24.11}} + {score:0.846715}
+{rank:22} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.93,s3:0.50,f_l:10.34}} + {n_res:2} + {res:[[2.44,-28.46],[4.48,-26.16]]} + {target_s11:{2.45:-26.10,4.50:-25.38}} + {score:0.846715}
+{rank:23} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.50,s1:0.80,s2:4.60,s3:0.50,f_l:10.60}} + {n_res:2} + {res:[[2.41,-39.91],[4.50,-20.78]]} + {target_s11:{2.45:-18.47,4.50:-20.78}} + {score:0.819524}
+{rank:24} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.00,s3:0.50,f_l:11.00}} + {n_res:2} + {res:[[2.45,-26.44],[4.53,-15.61]]} + {target_s11:{2.45:-26.44,4.50:-15.46}} + {score:0.819280}
+{rank:25} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.20,s3:0.50,f_l:10.80}} + {n_res:2} + {res:[[2.46,-28.79],[4.52,-17.30]]} + {target_s11:{2.45:-28.60,4.50:-17.20}} + {score:0.818724}
+{rank:26} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:4.85,s3:0.50,f_l:10.50}} + {n_res:2} + {res:[[2.48,-29.17],[4.51,-23.40]]} + {target_s11:{2.45:-20.67,4.50:-23.22}} + {score:0.810263}
+{rank:27} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.20,s1:0.80,s2:4.85,s3:0.50,f_l:10.40}} + {n_res:2} + {res:[[2.42,-29.39],[4.49,-22.77]]} + {target_s11:{2.45:-21.55,4.50:-22.60}} + {score:0.810263}
+{rank:28} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.00,s1:0.80,s2:5.00,s3:0.50,f_l:10.25}} + {n_res:2} + {res:[[2.44,-26.16],[4.47,-26.25]]} + {target_s11:{2.45:-24.92,4.50:-24.99}} + {score:0.810263}
+{rank:29} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.20,s1:0.80,s2:4.80,s3:0.50,f_l:10.50}} + {n_res:2} + {res:[[2.43,-32.32],[4.48,-22.72]]} + {target_s11:{2.45:-25.39,4.50:-22.51}} + {score:0.802192}
+{rank:30} + {geom:{a:115.00,b:50.00,l1:22.50,l2:15.00,l3:35.20,s1:0.80,s2:4.90,s3:0.50,f_l:10.40}} + {n_res:2} + {res:[[2.43,-27.75],[4.48,-22.94]]} + {target_s11:{2.45:-23.30,4.50:-22.58}} + {score:0.802192}
+
+# required output
+
+return only one valid json object with this exact shape:
+
+```json
+{
+  "summary": "short english evidence assessment",
+  "rules": [
+    {
+      "domain": {
+        "l1": {"min": 26.40, "max": 34.20},
+        "s1": {"min": 0.55, "max": 0.88}
+      },
+      "var_change": {"l1": "u", "s1": "d"},
+      "effect": {
+        "low_resonance_point": "h",
+        "s11_at_2_45": "d",
+        "high_resonance_point": "l",
+        "s11_at_4_50": "s"
+      },
+      "confidence": 0.68,
+      "note": "short english statement of the observed coordinated effect and its evidence limits"
+    }
+  ]
+}
+```
+
+do not include markdown fences or commentary outside the json object.
+
+# current evidence payload
+
+{
+  "task": "infer evidence-bounded qualitative variable interaction rules",
+  "iteration": 30,
+  "top_q_sample_count": 30,
+  "experience_evidence_count": 30,
+  "previous_active_rules": [
+    {
+      "rule": "r-0029-01",
+      "domain": {
+        "a": {
+          "min": 115.0,
+          "max": 115.0
+        },
+        "b": {
+          "min": 50.0,
+          "max": 50.0
+        },
+        "l1": {
+          "min": 22.5,
+          "max": 22.5
+        },
+        "l2": {
+          "min": 15.0,
+          "max": 15.0
+        },
+        "l3": {
+          "min": 34.9,
+          "max": 35.2
+        },
+        "s1": {
+          "min": 0.8,
+          "max": 0.8
+        },
+        "s2": {
+          "min": 4.8,
+          "max": 5.0
+        },
+        "s3": {
+          "min": 0.5,
+          "max": 0.5
+        },
+        "f_l": {
+          "min": 10.25,
+          "max": 10.5
+        }
+      },
+      "var_change": {
+        "a": "k",
+        "b": "k",
+        "l1": "k",
+        "l2": "k",
+        "l3": "k",
+        "s1": "k",
+        "s2": "k",
+        "s3": "k",
+        "f_l": "k"
+      },
+      "effect": {
+        "low_resonance_point": "k",
+        "s11_at_2_45": "k",
+        "high_resonance_point": "k",
+        "s11_at_4_50": "k"
+      },
+      "confidence": 0.84,
+      "note": "Dense full-score cluster remains supported: all samples have dual resonances near 2.42-2.48 and 4.47-4.51 GHz and both fixed-target S11 values below -20 dB. Keeping all geometry approximately unchanged in this narrow region is the safest sampling trend.",
+      "created_iteration": 29
+    },
+    {
+      "rule": "r-0029-02",
+      "domain": {
+        "a": {
+          "min": 115.0,
+          "max": 115.0
+        },
+        "b": {
+          "min": 50.0,
+          "max": 50.0
+        },
+        "l1": {
+          "min": 22.5,
+          "max": 22.5
+        },
+        "l2": {
+          "min": 15.0,
+          "max": 15.0
+        },
+        "l3": {
+          "min": 34.9,
+          "max": 35.2
+        },
+        "s1": {
+          "min": 0.8,
+          "max": 0.8
+        },
+        "s2": {
+          "min": 4.8,
+          "max": 5.0
+        },
+        "s3": {
+          "min": 0.5,
+          "max": 0.5
+        },
+        "f_l": {
+          "min": 10.25,
+          "max": 10.5
+        }
+      },
+      "var_change": {
+        "l3": "u"
+      },
+      "effect": {
+        "low_resonance_point": "l",
+        "s11_at_2_45": "s",
+        "high_resonance_point": "k",
+        "s11_at_4_50": "k"
+      },
+      "confidence": 0.62,
+      "note": "Within the full-score cluster, increasing l3 from about 34.9/35.0 to 35.2 tends to move the low resonance lower toward 2.42-2.43 GHz and makes S11 at 2.45 GHz shallower; high-band metrics show no consistent l3-only trend. All comparisons are within a narrow high-score region and score is capped at 1.",
+      "created_iteration": 29
+    }
+  ]
+}

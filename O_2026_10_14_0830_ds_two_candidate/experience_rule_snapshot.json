@@ -1,0 +1,165 @@
+[
+  {
+    "rule": "r-0001-01",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 14.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l2": "u"
+    },
+    "effect": {
+      "low_resonance_point": "h",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "d"
+    },
+    "confidence": 0.55,
+    "source": ["initial_0004", "iteration_0001_02", "iteration_0001_01", "initial_0039", "initial_0006", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "initial_0011", "initial_0032", "initial_0013", "initial_0038", "initial_0020", "initial_0015", "initial_0037", "initial_0010", "initial_0024", "initial_0007", "initial_0016", "initial_0034", "initial_0029", "initial_0040", "initial_0027", "initial_0014", "initial_0036", "initial_0031", "initial_0030", "initial_0019", "initial_0023", "initial_0012", "initial_0005", "initial_0018", "initial_0017", "initial_0001", "initial_0009", "initial_0008", "initial_0025", "initial_0026", "initial_0021"],
+    "note": "Clean rank-3 to rank-1 comparison with all other geometry equal: increasing l2 from 14 to 15 moved both detected resonances upward and deepened S11 at both fixed targets. Based on one real-HFSS pair, so confidence is moderate and limited to this narrow starting domain.",
+    "created_iteration": 1
+  },
+  {
+    "rule": "r-0001-02",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 34.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l3": "u"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "k",
+      "s11_at_4_50": "k"
+    },
+    "confidence": 0.5,
+    "source": ["initial_0004", "iteration_0001_02", "iteration_0001_01", "initial_0039", "initial_0006", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "initial_0011", "initial_0032", "initial_0013", "initial_0038", "initial_0020", "initial_0015", "initial_0037", "initial_0010", "initial_0024", "initial_0007", "initial_0016", "initial_0034", "initial_0029", "initial_0040", "initial_0027", "initial_0014", "initial_0036", "initial_0031", "initial_0030", "initial_0019", "initial_0023", "initial_0012", "initial_0005", "initial_0018", "initial_0017", "initial_0001", "initial_0009", "initial_0008", "initial_0025", "initial_0026", "initial_0021"],
+    "note": "Clean rank-2 to rank-1 comparison with all other geometry equal: increasing l3 from 34 to 35 moved the lower resonance downward and strongly deepened S11 at 2.45 while the upper resonance and 4.50 target stayed approximately unchanged. Based on one near-duplicate pair.",
+    "created_iteration": 1
+  },
+  {
+    "rule": "r-0001-03",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 14.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 34.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l2": "u",
+      "l3": "d"
+    },
+    "effect": {
+      "low_resonance_point": "h",
+      "s11_at_2_45": "s",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "d"
+    },
+    "confidence": 0.42,
+    "source": ["initial_0004", "iteration_0001_02", "iteration_0001_01", "initial_0039", "initial_0006", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "initial_0011", "initial_0032", "initial_0013", "initial_0038", "initial_0020", "initial_0015", "initial_0037", "initial_0010", "initial_0024", "initial_0007", "initial_0016", "initial_0034", "initial_0029", "initial_0040", "initial_0027", "initial_0014", "initial_0036", "initial_0031", "initial_0030", "initial_0019", "initial_0023", "initial_0012", "initial_0005", "initial_0018", "initial_0017", "initial_0001", "initial_0009", "initial_0008", "initial_0025", "initial_0026", "initial_0021"],
+    "note": "Joint rank-3 to rank-2 comparison with l2 increased and l3 decreased: both resonances moved higher, the 2.45 target shallowed, and the 4.50 target deepened. This represents a local tradeoff observed in one real-HFSS pair.",
+    "created_iteration": 1
+  }
+]

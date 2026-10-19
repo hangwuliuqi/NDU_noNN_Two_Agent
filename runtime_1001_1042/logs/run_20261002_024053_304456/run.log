@@ -1,0 +1,15 @@
+2026-10-02 10:40:53,305 | INFO | llmo | configuration loaded from E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\project.conf
+2026-10-02 10:40:53,305 | INFO | llmo | ordered run logs: E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\runtime_1001_1042\logs\run_20261002_024053_304456
+2026-10-02 10:40:53,305 | INFO | llmo | run output directory: E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\runtime_1001_1042
+2026-10-02 10:40:53,305 | INFO | llmo | resume mode enabled; existing samples, rules, and checkpoints will be reused
+2026-10-02 10:40:54,489 | ERROR | llmo | optimization terminated because of an unrecoverable error
+Traceback (most recent call last):
+  File "E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\main.py", line 48, in main
+    result = engine.run()
+  File "E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\llmo\optimizer.py", line 88, in run
+    self.validate_and_bootstrap()
+  File "E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\llmo\optimizer.py", line 82, in validate_and_bootstrap
+    imported = import_initial_parquet(parquet, self.conf, self.specs, self.pools)
+  File "E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\llmo\initial_data.py", line 94, in import_initial_parquet
+    raise ValueError("the initial Parquet contains no samples and the information pools are empty")
+ValueError: the initial Parquet contains no samples and the information pools are empty

@@ -1,0 +1,219 @@
+[
+  {
+    "rule": "r-0036-01",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.6
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 5.5,
+        "max": 5.6
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l3": "u"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "k",
+      "s11_at_4_50": "k"
+    },
+    "confidence": 0.78,
+    "source": ["iteration_0020_02", "iteration_0032_01", "iteration_0036_01", "iteration_0030_01", "iteration_0035_01", "iteration_0030_02", "iteration_0022_01", "iteration_0026_02", "iteration_0033_01", "iteration_0023_02", "iteration_0024_02", "iteration_0024_01", "iteration_0034_02", "iteration_0023_01", "iteration_0025_01", "iteration_0028_02", "iteration_0008_01", "iteration_0010_01", "iteration_0027_02", "iteration_0009_01", "iteration_0004_01", "iteration_0027_01", "iteration_0031_02", "iteration_0025_02", "iteration_0003_01", "iteration_0006_02", "iteration_0011_02", "iteration_0017_02", "iteration_0018_01", "iteration_0022_02"],
+    "note": "Starting from l3=35.0 mm in the 115x50 mm cluster with l1 22.5-22.6 mm and s2 5.5-5.6 mm, increasing l3 toward 35.25-35.55 mm lowers the low resonance and deepens S11 at 2.40 GHz in most comparable samples. High resonance and 4.50 GHz S11 show no consistent movement.",
+    "created_iteration": 36
+  },
+  {
+    "rule": "r-0036-02",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.6
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 5.2,
+        "max": 5.6
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "s2": "u"
+    },
+    "effect": {
+      "low_resonance_point": "k",
+      "s11_at_2_45": "k",
+      "high_resonance_point": "k",
+      "s11_at_4_50": "d"
+    },
+    "confidence": 0.58,
+    "source": ["iteration_0020_02", "iteration_0032_01", "iteration_0036_01", "iteration_0030_01", "iteration_0035_01", "iteration_0030_02", "iteration_0022_01", "iteration_0026_02", "iteration_0033_01", "iteration_0023_02", "iteration_0024_02", "iteration_0024_01", "iteration_0034_02", "iteration_0023_01", "iteration_0025_01", "iteration_0028_02", "iteration_0008_01", "iteration_0010_01", "iteration_0027_02", "iteration_0009_01", "iteration_0004_01", "iteration_0027_01", "iteration_0031_02", "iteration_0025_02", "iteration_0003_01", "iteration_0006_02", "iteration_0011_02", "iteration_0017_02", "iteration_0018_01", "iteration_0022_02"],
+    "note": "Within l3=35.0 mm designs in the 115x50 mm cluster, increasing s2 from about 5.2 to 5.6 mm generally deepens S11 at 4.50 GHz in most comparable samples. Low and high resonance positions and 2.40 GHz S11 show no consistent trend, and the depth comparison is noisy with small l1 variations.",
+    "created_iteration": 36
+  },
+  {
+    "rule": "r-0036-03",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.6
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 5.5,
+        "max": 5.6
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l1": "u"
+    },
+    "effect": {
+      "low_resonance_point": "k",
+      "s11_at_2_45": "k",
+      "high_resonance_point": "l",
+      "s11_at_4_50": "k"
+    },
+    "confidence": 0.4,
+    "source": ["iteration_0020_02", "iteration_0032_01", "iteration_0036_01", "iteration_0030_01", "iteration_0035_01", "iteration_0030_02", "iteration_0022_01", "iteration_0026_02", "iteration_0033_01", "iteration_0023_02", "iteration_0024_02", "iteration_0024_01", "iteration_0034_02", "iteration_0023_01", "iteration_0025_01", "iteration_0028_02", "iteration_0008_01", "iteration_0010_01", "iteration_0027_02", "iteration_0009_01", "iteration_0004_01", "iteration_0027_01", "iteration_0031_02", "iteration_0025_02", "iteration_0003_01", "iteration_0006_02", "iteration_0011_02", "iteration_0017_02", "iteration_0018_01", "iteration_0022_02"],
+    "note": "Only sparse direct comparisons within l3=35.0 mm and s2 5.5-5.6 mm; increasing l1 from about 22.5 to 22.6 mm is weakly associated with a lower high resonance, about 4.51 toward 4.49 GHz. Other metrics show no clear trend.",
+    "created_iteration": 36
+  },
+  {
+    "rule": "r-0036-04",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.6
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 5.2,
+        "max": 5.6
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l3": "u",
+      "s2": "u"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "k",
+      "s11_at_4_50": "d"
+    },
+    "confidence": 0.55,
+    "source": ["iteration_0020_02", "iteration_0032_01", "iteration_0036_01", "iteration_0030_01", "iteration_0035_01", "iteration_0030_02", "iteration_0022_01", "iteration_0026_02", "iteration_0033_01", "iteration_0023_02", "iteration_0024_02", "iteration_0024_01", "iteration_0034_02", "iteration_0023_01", "iteration_0025_01", "iteration_0028_02", "iteration_0008_01", "iteration_0010_01", "iteration_0027_02", "iteration_0009_01", "iteration_0004_01", "iteration_0027_01", "iteration_0031_02", "iteration_0025_02", "iteration_0003_01", "iteration_0006_02", "iteration_0011_02", "iteration_0017_02", "iteration_0018_01", "iteration_0022_02"],
+    "note": "Jointly increasing l3 from 35.0 mm and s2 from about 5.2-5.6 mm is associated with a lower low resonance, deeper 2.40 GHz S11, and generally deeper 4.50 GHz S11 in most comparable 115x50 mm cluster samples. The high resonance is unchanged; the 4.50 GHz depth is partly dominated by s2 and direct joint comparisons are sparse or confounded by small l1 variations.",
+    "created_iteration": 36
+  }
+]

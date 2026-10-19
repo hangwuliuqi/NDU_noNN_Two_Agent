@@ -1,0 +1,56 @@
+[
+  {
+    "rule": "r-0072-01",
+    "domain": {
+      "l3": {
+        "min": 34.5,
+        "max": 35.2
+      },
+      "s3": {
+        "min": 0.3,
+        "max": 0.52
+      }
+    },
+    "var_change": {
+      "l3": "u",
+      "s3": "k"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "k"
+    },
+    "confidence": 0.73,
+    "source": ["iteration_0009_01", "iteration_0010_02", "iteration_0012_02", "iteration_0048_01", "iteration_0069_02", "initial_0004", "iteration_0018_02", "iteration_0027_02", "iteration_0065_01", "iteration_0022_02", "iteration_0024_02", "iteration_0025_01", "iteration_0031_02", "iteration_0045_01", "iteration_0054_02", "iteration_0071_01", "iteration_0008_01", "iteration_0051_01", "iteration_0015_02", "iteration_0045_02", "iteration_0010_01", "iteration_0019_02", "iteration_0026_02", "iteration_0044_02", "iteration_0046_01", "iteration_0011_01", "iteration_0049_01", "iteration_0072_02", "iteration_0060_02", "iteration_0009_02", "iteration_0041_02", "iteration_0050_01", "iteration_0050_02", "iteration_0056_01", "iteration_0056_02", "iteration_0038_01", "iteration_0023_02", "iteration_0023_01", "iteration_0034_02", "iteration_0022_01"],
+    "note": "Within the observed l3=34.50-35.20 mm and s3=0.30-0.52 mm region, increasing l3 is repeatedly associated with a lower low resonance, higher high resonance, and generally deeper 2.45 GHz S11; 4.50 GHz S11 remains mixed and s3 variation prevents clean isolation.",
+    "created_iteration": 72
+  },
+  {
+    "rule": "r-0072-02",
+    "domain": {
+      "l3": {
+        "min": 34.95,
+        "max": 35.05
+      },
+      "s3": {
+        "min": 0.4,
+        "max": 0.52
+      }
+    },
+    "var_change": {
+      "s3": "u",
+      "l3": "k"
+    },
+    "effect": {
+      "low_resonance_point": "k",
+      "s11_at_2_45": "k",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "k"
+    },
+    "confidence": 0.56,
+    "source": ["iteration_0009_01", "iteration_0010_02", "iteration_0012_02", "iteration_0048_01", "iteration_0069_02", "initial_0004", "iteration_0018_02", "iteration_0027_02", "iteration_0065_01", "iteration_0022_02", "iteration_0024_02", "iteration_0025_01", "iteration_0031_02", "iteration_0045_01", "iteration_0054_02", "iteration_0071_01", "iteration_0008_01", "iteration_0051_01", "iteration_0015_02", "iteration_0045_02", "iteration_0010_01", "iteration_0019_02", "iteration_0026_02", "iteration_0044_02", "iteration_0046_01", "iteration_0011_01", "iteration_0049_01", "iteration_0072_02", "iteration_0060_02", "iteration_0009_02", "iteration_0041_02", "iteration_0050_01", "iteration_0050_02", "iteration_0056_01", "iteration_0056_02", "iteration_0038_01", "iteration_0023_02", "iteration_0023_01", "iteration_0034_02", "iteration_0022_01"],
+    "note": "Near l3=34.95-35.05 mm, increasing s3 across approximately 0.40-0.52 mm is weakly associated with a higher high resonance, while low-resonance position and both fixed-target S11 responses show no stable direction; l3 differences and local variability confound the comparison.",
+    "created_iteration": 72
+  }
+]

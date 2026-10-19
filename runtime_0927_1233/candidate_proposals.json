@@ -1,0 +1,100 @@
+[
+  {
+    "iteration": 1,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 23.0,
+        "l2": 14.5,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "The rank:1 evaluated summary is the strongest local starting point because it already shows two resonances at 2.45 and 4.53 GHz and interpolated target S11 values of -17.43 dB at 2.40 GHz and -15.46 dB at 4.50 GHz. This proposal keeps the successful substrate, slot-width, and feed-line arrangement from that summary, but increases l1 from 22.50 to 23.00 mm to move the low resonance slightly closer to 2.40 GHz, and reduces l2 from 15.00 to 14.50 mm to nudge the high resonance down toward 4.50 GHz. The expected combined effect is a better centered dual-resonance pair and a deeper 4.50 GHz target S11 while preserving the already good 2.40 GHz match, though the actual response must be confirmed by a new evaluation.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 23.0,
+      "l2": 14.5,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 23.0,
+      "l2": 14.5,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "The rank:1 evaluated summary is the strongest local starting point because it already shows two resonances at 2.45 and 4.53 GHz and interpolated target S11 values of -17.43 dB at 2.40 GHz and -15.46 dB at 4.50 GHz. This proposal keeps the successful substrate, slot-width, and feed-line arrangement from that summary, but increases l1 from 22.50 to 23.00 mm to move the low resonance slightly closer to 2.40 GHz, and reduces l2 from 15.00 to 14.50 mm to nudge the high resonance down toward 4.50 GHz. The expected combined effect is a better centered dual-resonance pair and a deeper 4.50 GHz target S11 while preserving the already good 2.40 GHz match, though the actual response must be confirmed by a new evaluation.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 1,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 24.5,
+        "l2": 14.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This second candidate uses a slightly stronger local perturbation of the best-ranked evaluated summary to target the observed small offsets in both resonance positions. Starting from the rank:1 geometry with resonances at 2.45 and 4.53 GHz, l1 is increased from 22.50 to 24.50 mm to lower the low resonance toward 2.40 GHz, while l2 is reduced from 15.00 to 14.00 mm to lower the high resonance toward 4.50 GHz. Keeping the other dimensions unchanged is intended to retain the dual-resonance mechanism and the favorable fixed-target S11 behavior seen in the top-ranked sample, while increasing the chance of satisfying both target-frequency positions. This remains a proposal for new evaluation and is not claimed to satisfy the stopping condition before measurement.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 24.5,
+      "l2": 14.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 24.5,
+      "l2": 14.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This second candidate uses a slightly stronger local perturbation of the best-ranked evaluated summary to target the observed small offsets in both resonance positions. Starting from the rank:1 geometry with resonances at 2.45 and 4.53 GHz, l1 is increased from 22.50 to 24.50 mm to lower the low resonance toward 2.40 GHz, while l2 is reduced from 15.00 to 14.00 mm to lower the high resonance toward 4.50 GHz. Keeping the other dimensions unchanged is intended to retain the dual-resonance mechanism and the favorable fixed-target S11 behavior seen in the top-ranked sample, while increasing the chance of satisfying both target-frequency positions. This remains a proposal for new evaluation and is not claimed to satisfy the stopping condition before measurement.",
+    "rules_used": [],
+    "error": null
+  }
+]

@@ -1,0 +1,165 @@
+[
+  {
+    "rule": "r-0008-01",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 14.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 30.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l3": "u"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "k",
+      "s11_at_4_50": "k"
+    },
+    "confidence": 0.74,
+    "source": ["iteration_0006_01", "iteration_0003_01", "iteration_0004_01", "iteration_0007_02", "initial_0004", "iteration_0004_02", "iteration_0008_01", "iteration_0003_02", "iteration_0007_01", "iteration_0008_02", "iteration_0002_02", "initial_0039", "iteration_0001_01", "iteration_0005_01", "initial_0006", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "iteration_0006_02", "initial_0011", "iteration_0001_02", "iteration_0005_02", "initial_0032", "initial_0013", "initial_0038", "initial_0020", "iteration_0002_01", "initial_0015", "initial_0037", "initial_0010", "initial_0024", "initial_0007", "initial_0016", "initial_0034", "initial_0029", "initial_0040", "initial_0027", "initial_0014", "initial_0036"],
+    "note": "Increasing l3 from 30-33 mm toward 35 mm in this compact a=115,b=50 domain lowers the low resonance and deepens S11 at 2.45 GHz. High resonance and S11 at 4.50 GHz remain approximately unchanged in the relevant l2=14 and l2=15 comparisons.",
+    "created_iteration": 8
+  },
+  {
+    "rule": "r-0008-02",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 14.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l2": "u"
+    },
+    "effect": {
+      "low_resonance_point": "h",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "d"
+    },
+    "confidence": 0.82,
+    "source": ["iteration_0006_01", "iteration_0003_01", "iteration_0004_01", "iteration_0007_02", "initial_0004", "iteration_0004_02", "iteration_0008_01", "iteration_0003_02", "iteration_0007_01", "iteration_0008_02", "iteration_0002_02", "initial_0039", "iteration_0001_01", "iteration_0005_01", "initial_0006", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "iteration_0006_02", "initial_0011", "iteration_0001_02", "iteration_0005_02", "initial_0032", "initial_0013", "initial_0038", "initial_0020", "iteration_0002_01", "initial_0015", "initial_0037", "initial_0010", "initial_0024", "initial_0007", "initial_0016", "initial_0034", "initial_0029", "initial_0040", "initial_0027", "initial_0014", "initial_0036"],
+    "note": "Increasing l2 from 14.0 toward 14.8-15.0 mm with l3 fixed at 35 mm raises the high resonance from about 4.35 GHz toward 4.50-4.54 GHz and deepens S11 at 4.50 GHz. The low resonance moves slightly higher and S11 at 2.45 GHz deepens. Repeated nearby samples support this strongly.",
+    "created_iteration": 8
+  },
+  {
+    "rule": "r-0008-03",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 14.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 30.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l2": "u",
+      "l3": "u"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "d"
+    },
+    "confidence": 0.78,
+    "source": ["iteration_0006_01", "iteration_0003_01", "iteration_0004_01", "iteration_0007_02", "initial_0004", "iteration_0004_02", "iteration_0008_01", "iteration_0003_02", "iteration_0007_01", "iteration_0008_02", "iteration_0002_02", "initial_0039", "iteration_0001_01", "iteration_0005_01", "initial_0006", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "iteration_0006_02", "initial_0011", "iteration_0001_02", "iteration_0005_02", "initial_0032", "initial_0013", "initial_0038", "initial_0020", "iteration_0002_01", "initial_0015", "initial_0037", "initial_0010", "initial_0024", "initial_0007", "initial_0016", "initial_0034", "initial_0029", "initial_0040", "initial_0027", "initial_0014", "initial_0036"],
+    "note": "Coordinated joint increase from approximately l2=14,l3=30 to l2=15,l3=35 lowers the low resonance toward 2.45 GHz and deepens S11 at 2.45 GHz, while raising the high resonance toward 4.50 GHz and deepening S11 at 4.50 GHz.",
+    "created_iteration": 8
+  }
+]

@@ -1,0 +1,134 @@
+SYSTEM MESSAGE
+You are a precise antenna design agent. Return only valid JSON.
+
+USER MESSAGE
+# role
+
+you are the experience summary module in a closed-loop dual-band antenna optimization system.
+
+# objective
+
+infer the latest complete variable design guidebook from the 2 available score-ranked evaluated samples. use the numerical geometry, actual resonance metrics, target-frequency s11 values, and ranking scores as evidence. return the complete current guidebook snapshot, adding only rules supported by the supplied evidence. sample rows contain only their rank for comparison; provenance and persistent identifiers are intentionally withheld. The ranking score combines actual resonance-position quality with target-frequency S11 quality, while the physical stopping conditions are stated separately below.
+
+rules are empirical design-guidance trends, not hard constraints or universal laws. an individual sample may violate a rule; a rule is useful when the trend is supported by most relevant, comparable samples in its domain, even if it does not fit every sample. judge a rule by the pattern across the evidence, not by demanding universal compliance.
+
+for this task, a design-guidance rule is a majority-supported empirical pattern between a coordinated geometry change and observed antenna effects within a stated starting-design domain. "most samples support the rule" means the supporting comparable observations are the majority of relevant observations that can actually test that rule; isolated exceptions do not invalidate it. these rules guide future candidate design and are not per-sample pass/fail requirements. only the separately stated code-controlled stopping conditions are hard requirements for declaring optimization success.
+
+return the complete rule snapshot that should be used by the sampling guidance module in the next iteration. derive the rules from the supplied evaluated-sample evidence; do not assume that previous active rules are provided. return at most 8 rules. code validates and immediately publishes this snapshot; it does not maintain a separate evidence ledger or automatically change confidence.
+
+# legal variable ranges
+
+interpret every design using these configured closed intervals:
+
+- `a`: [100.00, 150.00] mm; substrate length.
+- `b`: [40.00, 80.00] mm; substrate width.
+- `l1`: [15.00, 45.00] mm; upper slot length.
+- `l2`: [5.00, 15.00] mm; middle slot length.
+- `l3`: [15.00, 45.00] mm; lower slot length.
+- `s1`: [0.50, 1.50] mm; upper slot width.
+- `s2`: [2.00, 10.00] mm; middle slot width.
+- `s3`: [0.20, 1.60] mm; lower slot width.
+- `f_l`: [5.00, 15.00] mm; feed-line length.
+
+# ranking score and physical stopping conditions
+
+the code computes a ranking-only score R; it does not decide success:
+q_r1 = exp(-abs(r1 - 2.45) / 0.05)
+q_r2 = exp(-abs(r2 - 4.50) / 0.05)
+q_f = (q_r1 + q_r2) / 2
+q_band(s) = clip((-s) / abs(-15.00), 0, 1)
+q_s = 0.500000 * q_band(s11_at_2_45) + 0.500000 * q_band(s11_at_4_50)
+R = 0.600000 * q_f + 0.400000 * q_s
+Here r1 and r2 are the first and second frequency-ordered detector slots. When a slot is missing, the code stores 0.00 GHz internally for score calculation; this placeholder is not a real resonance and is omitted from the displayed res list. With one detected resonance, do not assume it belongs to the low band: n_res and res identify the actual evidence, while r1/r2 are only the stored score slots. The values s11_at_2_45 and s11_at_4_50 are S11 interpolated at the fixed target frequencies, not at resonance minima. R is used only for ranking and TOP-2 selection; success is checked directly by the physical conditions below.
+
+# code-controlled stopping condition
+
+only the code decides whether optimization stops after a real hfss evaluation. it stops only when the detector finds two independent resonances, the lower resonance is within 0.01 ghz of 2.45 ghz, the higher resonance is within 0.01 ghz of 4.50 ghz, s11 at the fixed 2.45 ghz target is at most -15.00 db, and s11 at the fixed 4.50 ghz target is at most -15.00 db. R is only a ranking score and is not a success condition. the llm must never claim that a proposed candidate already satisfies the stopping condition.
+
+# how to read an evaluated sample
+
+compact sample contract:
+- one complete evaluated sample occupies one line. `+` only separates sections; it is not arithmetic addition.
+- `rank:n` is the sample's position after sorting the available evaluated samples by ranking score `R` from highest to lowest. `rank:1` is the highest-ranked sample, `rank:2` is the second highest, and a smaller rank number is better. rank is comparative, not a persistent sample identifier.
+- `geom={a:value,b:value,l1:value,l2:value,l3:value,s1:value,s2:value,s3:value,f_l:value}` is the evaluated antenna geometry in mm: `a`=substrate length, `b`=substrate width, `l1`=upper slot length, `l2`=middle slot length, `l3`=lower slot length, `s1`=upper slot width, `s2`=middle slot width, `s3`=lower slot width, and `f_l`=feed-line length. every value is continuous; no low/mid/high category is implied.
+- `n_res` is the number of valid resonances detected from the complete measured s11 curve after the configured prominence, separation, and saddle checks. it is exactly 0, 1, or 2 and must equal the number of pairs in `res`.
+- `res` contains the detected actual resonance valleys. each pair is `[resonance_frequency_ghz,s11_at_that_resonance_db]`. a more-negative second value means a deeper resonance valley. when two pairs exist they are ordered by increasing frequency.
+- the valid resonance forms are `{n_res:0} + {res:[]}`, `{n_res:1} + {res:[[f1,s11_1]]}`, and `{n_res:2} + {res:[[f1,s11_1],[f2,s11_2]]}`. for `n_res:1`, the sole resonance is not automatically assigned to the low band; compare its frequency with both 2.45 ghz and 4.50 ghz. absent resonances are omitted, not represented by physical zero values, and must not be invented.
+- `target_s11={2.45:s_low,4.50:s_high}` contains s11 linearly interpolated at the two fixed target frequencies. these values drive the numerical score and are distinct from resonance-valley depths in `res`. at either target, a more-negative value is better; a value at or below -15.00 db satisfies that band's matching threshold.
+- `score:R` is used only for ranking. The detector stores the first and second frequency-ordered resonance slots as `r1` and `r2`; when two resonances exist, `r1` is the lower-frequency detected valley and `r2` is the higher-frequency detected valley. A missing slot is stored internally as `0.00 GHz` only so the ranking formula can be evaluated; this placeholder is not a measured or physical resonance and is omitted from `res`. The frequency quality is `q_r1=exp(-abs(r1-2.45)/0.05)`, `q_r2=exp(-abs(r2-4.50)/0.05)`, and `q_f=(q_r1+q_r2)/2`. If there is only one detected resonance, do not assume it belongs to the low band: `r1` is simply the one detected slot, `r2` is the missing-slot placeholder, and `n_res` plus `res` remain the authoritative evidence about what was detected. The target-frequency S11 quality is `q_s=0.500000*q_band(s_low)+0.500000*q_band(s_high)`, where `q_band(s)=clip((-s)/abs(-15.00),0,1)`. Here `s_low` and `s_high` are S11 values interpolated at the fixed target frequencies, not at the actual resonance minima. Finally `R=0.600000*q_f+0.400000*q_s`. R is not a success condition.
+- complete example: `{rank:1} + {geom:{a:125.00,b:60.00,l1:30.00,l2:10.00,l3:30.00,s1:1.00,s2:5.00,s3:0.90,f_l:10.00}} + {n_res:2} + {res:[[2.48,-15.40],[4.47,-15.70]]} + {target_s11:{2.45:-12.80,4.50:-13.90}} + {score:0.667500}`.
+
+# experience rule format
+
+experience guidebook rule contract:
+ - the response is the complete current guidebook snapshot, derived from the supplied score-ranked TOP-2 selection (up to this many evaluated samples). add only rules supported by relevant, comparable observations; do not assume any earlier rules were included in the prompt.
+- `summary` is a short evidence-bounded assessment of the complete returned snapshot.
+- every item in `rules` is one coordinated qualitative trend. the experience llm outputs `domain`, `var_change`, `effect`, `confidence`, and `note`; code later assigns the internal `rule` id, provenance `source`, and `created_iteration`.
+- `domain` describes the starting-geometry region where the trend may apply. use `global` only when the supplied evidence supports no narrower domain. otherwise use one or more lowercase variables with inclusive continuous bounds, for example `{"l1":{"min":26.40,"max":34.20},"s1":{"min":0.55,"max":0.88}}`. every bound must stay inside the legal range. variables omitted from `domain` are unrestricted by that rule.
+- `var_change` is one coordinated proposed change, not a set of independent causal claims. each included variable uses `u`=increase, `d`=decrease, or `k`=keep approximately unchanged. include only variables needed to state the supported interaction.
+- `effect` must contain exactly four fields. `low_resonance_point` and `high_resonance_point` use `l`=the numerical resonance frequency moves lower, `h`=it moves higher, or `k`=no clear meaningful movement. these symbols describe direction, not whether the move is closer to the target.
+- `s11_at_2_45` and `s11_at_4_50` describe s11 at the fixed targets 2.45 ghz and 4.50 ghz. they use `d`=deeper/more negative, `s`=shallower/less negative, or `k`=no clear meaningful depth change. a missing resonance is unknown evidence and must never be translated into `k`.
+- `confidence` is the llm's direct evidence-strength assessment from 0.00 through 0.99, not a probability calculated by code. use a low value for sparse, distant, or confounded comparisons and a higher value only for repeated, nearby, consistent real-HFSS comparisons. never use 1.00.
+- `note` is a concise human-readable statement of the coordinated change, all four expected effects, the supported domain, and important evidence limitations. do not claim a universal physical law or certainty.
+- complete example: `domain={l1:{min:26.40,max:34.20},s1:{min:0.55,max:0.88}}`; `var_change={l1:u,s1:d}`; `effect={low_resonance_point:h,s11_at_2_45:d,high_resonance_point:l,s11_at_4_50:s}`; `confidence=0.68`. this means that, only for starting designs in the stated domain, increasing `l1` while decreasing `s1` is hypothesized to move the low resonance to a numerically higher frequency, deepen s11 at 2.45 ghz, move the high resonance to a numerically lower frequency, and make s11 at 4.50 ghz shallower.
+
+# critical reasoning constraints
+
+If the number of supplied samples is too small to establish variable-design experience, you may offer useful design guidance directed toward the design goals in the summary, clearly labeling it as an unverified hypothesis rather than an empirical finding. Keep rules limited to measured evidence.
+
+- ranking or correlation alone does not prove causality.
+- when evidence is weak, return fewer rules or an empty rule list; label any goal-directed suggestion without measured support as a hypothesis.
+- assess each rule using relevant, comparable samples within its domain and similar joint-change context; do not treat unrelated samples as votes for or against it.
+- do not treat one or a few contrary samples as sufficient evidence for a trend. judge each proposed rule using the majority pattern among relevant, comparable samples that can test it; when evidence is sparse or mixed, return fewer rules or express the uncertainty in confidence and note.
+- favor coordinated interaction rules involving several variables, ideally three or more when the evidence supports them, instead of making the guidebook consist only of single-variable or two-variable trends. include only variables whose joint changes are supported by the samples; never add variables merely to make a rule more complex.
+- prefer coordinated changes supported by comparisons among nearby samples.
+- use only these lowercase variable names: `a`, `b`, `l1`, `l2`, `l3`, `s1`, `s2`, `s3`, `f_l`.
+- `domain` is either `global` or an object that gives a continuous closed starting range for each relevant variable as `{"min":value,"max":value}`.
+- domain boundaries must remain within the legal variable ranges and must be supported by the supplied continuous-valued evidence. do not recreate fixed low/mid/high partitions.
+- `u`, `d`, and `k` mean increase, decrease, and keep approximately unchanged.
+- for `low_resonance_point` and `high_resonance_point`, use only `l`, `h`, or `k`: `l` means the numerical resonance frequency moves lower, `h` means it moves higher, and `k` means no clear meaningful frequency movement.
+- for `s11_at_2_45` and `s11_at_4_50`, use only `d`, `s`, or `k`: `d` means the fixed-target s11 becomes deeper/more negative, `s` means it becomes shallower/less negative, and `k` means no clear meaningful depth change.
+- every rule must contain all four required effect metrics.
+- missing resonance cannot be interpreted as `k`.
+- confidence must be between 0 and 1; never use 1.00. this is your direct, evidence-bounded assessment, not a code-computed probability. use low values when comparisons are sparse or confounded; reserve high values for repeated, consistent, nearby real-hfss comparisons.
+- returned rules are hypotheses. code assigns internal identifiers after the response; code does not calculate, upgrade, or downgrade confidence.
+- infer empirical trends only from numerical geometry and measured metrics in the 2 supplied sample lines; do not present untested guidance as an observed trend.
+- derive every returned rule from patterns that can be tested using the supplied evaluated samples; do not claim to retain, revise, or reject an earlier rule that is not included in this prompt.
+
+# TOP-2 evaluated samples
+
+the section contains 2 score-ranked evaluated sample lines, or `none` when no sample exists. persistent identifiers and provenance are omitted:
+
+{rank:1} + {geom:{a:115.00,b:50.00,l1:23.00,l2:15.00,l3:34.75,s1:0.80,s2:4.00,s3:0.50,f_l:11.00}} + {n_res:2} + {res:[[2.47,-26.66],[4.39,-16.62]]} + {target_s11:{2.45:-22.75,4.50:-14.33}} + {score:0.625388}
+{rank:2} + {geom:{a:115.00,b:50.00,l1:23.50,l2:15.00,l3:34.50,s1:0.80,s2:4.00,s3:0.50,f_l:11.00}} + {n_res:2} + {res:[[2.52,-28.86],[4.25,-17.64]]} + {target_s11:{2.45:-15.61,4.50:-10.45}} + {score:0.415274}
+
+# required output
+
+return only one valid json object with this exact shape:
+
+```json
+{
+  "summary": "short english evidence assessment",
+  "rules": [
+    {
+      "domain": {
+        "l1": {"min": 26.40, "max": 34.20},
+        "s1": {"min": 0.55, "max": 0.88}
+      },
+      "var_change": {"l1": "u", "s1": "d"},
+      "effect": {
+        "low_resonance_point": "h",
+        "s11_at_2_45": "d",
+        "high_resonance_point": "l",
+        "s11_at_4_50": "s"
+      },
+      "confidence": 0.68,
+      "note": "short english statement of the observed coordinated effect and its evidence limits"
+    }
+  ]
+}
+```
+
+do not include markdown fences or commentary outside the json object.
+
+

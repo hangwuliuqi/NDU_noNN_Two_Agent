@@ -1,0 +1,56 @@
+[
+  {
+    "rule": "r-0003-01",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 10.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "f_l": "u"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "s"
+    },
+    "confidence": 0.58,
+    "source": ["iteration_0002_02", "initial_0004", "iteration_0001_02", "iteration_0003_01", "iteration_0002_01", "initial_0039", "initial_0006", "iteration_0001_01", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "iteration_0003_02", "initial_0011", "initial_0032", "initial_0013", "initial_0038", "initial_0020", "initial_0015", "initial_0037", "initial_0010", "initial_0024", "initial_0007", "initial_0016", "initial_0034", "initial_0029", "initial_0040", "initial_0027", "initial_0014", "initial_0036"],
+    "note": "Within the repeated geometry at a=115, b=50, l1=22.5, l2=15, l3=35, s1=0.8, s2=4, and s3=0.5 mm, increasing f_l from 10.00 to 11.00 mm is associated with a lower low resonance, deeper 2.45 GHz S11, higher high resonance, and shallower 4.50 GHz S11; the 10.25 and 11.50 mm observations show local departures, so the trend is narrowly bounded and not universal.",
+    "created_iteration": 3
+  }
+]

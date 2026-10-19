@@ -1,0 +1,16 @@
+2026-10-02 10:42:49,937 | INFO | llmo | configuration loaded from E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\project.conf
+2026-10-02 10:42:49,937 | INFO | llmo | ordered run logs: E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\runtime_1001_1042\logs\run_20261002_024249_936102
+2026-10-02 10:42:49,938 | INFO | llmo | run output directory: E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\runtime_1001_1042
+2026-10-02 10:42:49,938 | INFO | llmo | resume mode enabled; existing samples, rules, and checkpoints will be reused
+2026-10-02 10:42:50,119 | INFO | llmo | evaluated sample pool ready: total=40, newly imported=40
+2026-10-02 10:42:50,119 | INFO | llmo | sampling LLM: module=sampling, provider=openai, model_id=gpt-5.6-terra, base_url=https://api.clawto.link/v1
+2026-10-02 10:42:50,119 | INFO | llmo | experience LLM: module=experience, provider=openai, model_id=gpt-5.6-terra, base_url=https://api.clawto.link/v1
+2026-10-02 10:42:50,119 | INFO | llmo | running one-time sampling LLM preflight
+2026-10-02 10:43:00,012 | INFO | httpx | HTTP Request: POST https://api.clawto.link/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-02 10:43:00,023 | INFO | llmo | running one-time experience LLM preflight
+2026-10-02 10:43:02,967 | INFO | httpx | HTTP Request: POST https://api.clawto.link/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-02 10:43:02,983 | INFO | llmo | iteration 1/80 started
+2026-10-02 10:43:02,987 | INFO | llmo | sampling guidance input uses top-15 evaluated samples
+2026-10-02 10:43:47,637 | INFO | httpx | HTTP Request: POST https://api.clawto.link/v1/chat/completions "HTTP/1.1 200 OK"
+2026-10-02 10:43:47,648 | WARNING | llmo | perturbed duplicate proposal {'a': 115.0, 'b': 50.0, 'l1': 22.5, 'l2': 15.0, 'l3': 35.0, 's1': 0.8, 's2': 4.0, 's3': 0.5, 'f_l': 11.0} into {'a': 118.56, 'b': 46.48, 'l1': 23.64, 'l2': 14.65, 'l3': 34.62, 's1': 0.77, 's2': 4.71, 's3': 0.64, 'f_l': 11.98}
+2026-10-02 10:43:49,147 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/2, success=0, running=0, pending=2, retry=0, failed=0, canceled=0, not_found=0, waiting=2, elapsed_seconds=0.0

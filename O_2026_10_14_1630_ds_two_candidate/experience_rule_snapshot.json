@@ -1,0 +1,112 @@
+[
+  {
+    "rule": "r-0004-01",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 23.5
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 34.5,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l1": "u",
+      "l3": "d"
+    },
+    "effect": {
+      "low_resonance_point": "k",
+      "s11_at_2_45": "s",
+      "high_resonance_point": "l",
+      "s11_at_4_50": "s"
+    },
+    "confidence": 0.62,
+    "source": ["iteration_0004_02", "iteration_0002_01", "initial_0004", "iteration_0002_02", "iteration_0003_01", "iteration_0004_01", "iteration_0001_01", "iteration_0003_02", "initial_0039", "iteration_0001_02", "initial_0006", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "initial_0011", "initial_0032", "initial_0013", "initial_0038", "initial_0020", "initial_0015", "initial_0037", "initial_0010", "initial_0024", "initial_0007", "initial_0016", "initial_0034", "initial_0029", "initial_0040", "initial_0027", "initial_0014", "initial_0036", "initial_0031", "initial_0030", "initial_0019", "initial_0023", "initial_0012", "initial_0005", "initial_0018", "initial_0017"],
+    "note": "In this top-ranked 115x50 mm domain with other slot dimensions fixed, increasing l1 while decreasing l3 lowers the high resonance and makes both fixed-target S11 values shallower. Low-resonance movement was small or mixed and became clearer only for the larger l1/l3 offset.",
+    "created_iteration": 4
+  },
+  {
+    "rule": "r-0004-02",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 23.5
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 34.5,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l1": "d",
+      "l3": "u"
+    },
+    "effect": {
+      "low_resonance_point": "k",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "d"
+    },
+    "confidence": 0.55,
+    "source": ["iteration_0004_02", "iteration_0002_01", "initial_0004", "iteration_0002_02", "iteration_0003_01", "iteration_0004_01", "iteration_0001_01", "iteration_0003_02", "initial_0039", "iteration_0001_02", "initial_0006", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "initial_0011", "initial_0032", "initial_0013", "initial_0038", "initial_0020", "initial_0015", "initial_0037", "initial_0010", "initial_0024", "initial_0007", "initial_0016", "initial_0034", "initial_0029", "initial_0040", "initial_0027", "initial_0014", "initial_0036", "initial_0031", "initial_0030", "initial_0019", "initial_0023", "initial_0012", "initial_0005", "initial_0018", "initial_0017"],
+    "note": "The reverse l1/l3 adjustment in the same domain raises the high resonance and deepens both fixed-target S11 values in nearby comparisons, though the low-resonance shift is not clear enough to state consistently.",
+    "created_iteration": 4
+  }
+]

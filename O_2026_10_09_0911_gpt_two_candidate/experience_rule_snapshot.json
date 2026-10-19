@@ -1,0 +1,169 @@
+[
+  {
+    "rule": "r-0024-01",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.35
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "s2": "u"
+    },
+    "effect": {
+      "low_resonance_point": "h",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "k",
+      "s11_at_4_50": "d"
+    },
+    "confidence": 0.84,
+    "source": ["iteration_0010_01", "iteration_0017_01", "initial_0004", "iteration_0004_01", "iteration_0016_02", "iteration_0008_02", "iteration_0002_02", "iteration_0010_02", "iteration_0013_02", "iteration_0018_01", "iteration_0021_01", "iteration_0022_01", "iteration_0019_02", "iteration_0022_02", "iteration_0002_01", "iteration_0019_01", "iteration_0023_02", "iteration_0024_02", "iteration_0004_02", "iteration_0003_02", "iteration_0007_01", "iteration_0006_02", "iteration_0020_02", "initial_0039", "iteration_0001_02", "iteration_0005_02", "iteration_0023_01", "iteration_0007_02", "iteration_0001_01", "iteration_0014_02", "iteration_0017_02", "iteration_0016_01", "initial_0006", "iteration_0011_02", "iteration_0012_01", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "iteration_0012_02"],
+    "note": "At the fixed 115/50-mm matched baseline, raising s2 from 4.00 toward about 4.35 mm usually deepens both fixed-target S11 values; the low valley shifts slightly upward in several variants while the high valley stays near 4.52-4.54 GHz. Matching is locally non-monotonic, especially at some intermediate s2 values.",
+    "created_iteration": 24
+  },
+  {
+    "rule": "r-0024-02",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 40.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l3": "u"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "s",
+      "high_resonance_point": "k",
+      "s11_at_4_50": "s"
+    },
+    "confidence": 0.74,
+    "source": ["iteration_0010_01", "iteration_0017_01", "initial_0004", "iteration_0004_01", "iteration_0016_02", "iteration_0008_02", "iteration_0002_02", "iteration_0010_02", "iteration_0013_02", "iteration_0018_01", "iteration_0021_01", "iteration_0022_01", "iteration_0019_02", "iteration_0022_02", "iteration_0002_01", "iteration_0019_01", "iteration_0023_02", "iteration_0024_02", "iteration_0004_02", "iteration_0003_02", "iteration_0007_01", "iteration_0006_02", "iteration_0020_02", "initial_0039", "iteration_0001_02", "iteration_0005_02", "iteration_0023_01", "iteration_0007_02", "iteration_0001_01", "iteration_0014_02", "iteration_0017_02", "iteration_0016_01", "initial_0006", "iteration_0011_02", "iteration_0012_01", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "iteration_0012_02"],
+    "note": "At the fixed matched baseline, increasing l3 from 35 toward 37.5-40 mm repeatedly lowers the low resonance and makes 2.45-GHz S11 much shallower; the high resonance remains near 4.5 GHz, with 4.50-GHz S11 generally slightly shallower. Evidence is limited to these controlled l3 variants.",
+    "created_iteration": 24
+  },
+  {
+    "rule": "r-0024-03",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.8
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.3
+      },
+      "s1": {
+        "min": 0.78,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.3
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.55
+      },
+      "f_l": {
+        "min": 10.9,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l1": "u",
+      "l3": "u",
+      "s1": "d",
+      "s2": "u",
+      "s3": "u",
+      "f_l": "d"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "s",
+      "high_resonance_point": "l",
+      "s11_at_4_50": "s"
+    },
+    "confidence": 0.25,
+    "source": ["iteration_0010_01", "iteration_0017_01", "initial_0004", "iteration_0004_01", "iteration_0016_02", "iteration_0008_02", "iteration_0002_02", "iteration_0010_02", "iteration_0013_02", "iteration_0018_01", "iteration_0021_01", "iteration_0022_01", "iteration_0019_02", "iteration_0022_02", "iteration_0002_01", "iteration_0019_01", "iteration_0023_02", "iteration_0024_02", "iteration_0004_02", "iteration_0003_02", "iteration_0007_01", "iteration_0006_02", "iteration_0020_02", "initial_0039", "iteration_0001_02", "iteration_0005_02", "iteration_0023_01", "iteration_0007_02", "iteration_0001_01", "iteration_0014_02", "iteration_0017_02", "iteration_0016_01", "initial_0006", "iteration_0011_02", "iteration_0012_01", "initial_0002", "initial_0035", "initial_0022", "initial_0003", "iteration_0012_02"],
+    "note": "One nearby joint variant with longer l1/l3, narrower s1, wider s2/s3, and shorter feed line moved both detected valleys lower and made both fixed-target S11 values shallower relative to the close baseline. This is an unisolated single comparison, so use only as a low-confidence local interaction hypothesis.",
+    "created_iteration": 24
+  }
+]

@@ -1,0 +1,39 @@
+[
+  {
+    "file": "parquet_40_sampling.txt",
+    "state": "First sampling turn in a new run, before any new HFSS simulation.",
+    "samples_in_user_prompt": 20,
+    "system_characters": 63,
+    "user_characters": 16469,
+    "sha256": "ce29abc469d0c76e55d3fb15e2a8ea6587db29f41228637aeb3c3af2f45b0b54"
+  },
+  {
+    "file": "parquet_40_experience.txt",
+    "state": "Post-HFSS example using two measured first-iteration curves from O_2026_10_14_1630_ds_two_candidate; zero-start is illustrative, not a recorded zero-start run.",
+    "samples_in_user_prompt": 40,
+    "system_characters": 63,
+    "user_characters": 22313,
+    "sha256": "5efdbeb9bbf62e491595ab8988e241aad0f3eb5d907b9a9d4ccb121a6989dc78"
+  },
+  {
+    "file": "zero_start_sampling.txt",
+    "state": "First sampling turn in a new run, before any new HFSS simulation.",
+    "samples_in_user_prompt": 0,
+    "system_characters": 63,
+    "user_characters": 12424,
+    "sha256": "085dae01f06a695841689e50e9e49270e9b93834f361d762f17dbea13fe4c47d"
+  },
+  {
+    "file": "zero_start_experience.txt",
+    "state": "Post-HFSS example using two measured first-iteration curves from O_2026_10_14_1630_ds_two_candidate; zero-start is illustrative, not a recorded zero-start run.",
+    "samples_in_user_prompt": 2,
+    "system_characters": 63,
+    "user_characters": 14888,
+    "sha256": "ec948e6ba22a5e7f446d0b6d8ab606f897ce8995d480f77a1dfad1672d7eec32"
+  },
+  {
+    "file": "preflight.txt",
+    "state": "Sent once per LLM module before formal optimization calls when preflight is enabled.",
+    "sha256": "958749010f441d722e250c484bdfa46d1da591ca1be76f1d6a578cb94155c08d"
+  }
+]

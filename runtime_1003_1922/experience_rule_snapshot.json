@@ -1,0 +1,57 @@
+[
+  {
+    "rule": "r-0041-01",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.5,
+        "max": 22.5
+      },
+      "l2": {
+        "min": 14.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 35.0,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.6
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l2": "u",
+      "s3": "k"
+    },
+    "effect": {
+      "low_resonance_point": "h",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "d"
+    },
+    "confidence": 0.8,
+    "source": ["initial_0004", "iteration_0007_01", "iteration_0014_02", "iteration_0020_02", "iteration_0003_01", "iteration_0003_02", "iteration_0006_01", "iteration_0009_02", "iteration_0005_01", "iteration_0006_02", "iteration_0002_02", "iteration_0005_02", "iteration_0008_02", "iteration_0030_01", "iteration_0011_01", "iteration_0008_01", "iteration_0004_02", "iteration_0004_01", "iteration_0041_02", "iteration_0009_01", "iteration_0020_01", "iteration_0038_01", "iteration_0026_02", "iteration_0041_01", "iteration_0001_02", "iteration_0001_01", "iteration_0035_02", "iteration_0029_02", "iteration_0032_02", "iteration_0011_02"],
+    "note": "Within the canonical geometry, increasing l2 from 14.00 toward 15.00 mm while keeping s3 approximately unchanged is supported by three l2=14 samples versus many nearby l2=15 samples: both resonance points move higher and fixed-target S11 generally becomes deeper. The evidence is local and other geometry changes are confounded.",
+    "created_iteration": 41
+  }
+]

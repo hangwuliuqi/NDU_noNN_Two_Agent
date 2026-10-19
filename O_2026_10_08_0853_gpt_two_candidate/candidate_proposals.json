@@ -1,0 +1,110 @@
+[
+  {
+    "iteration": 1,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This proposal retains the highest-ranked evaluated geometry as a focused repeat candidate: it is the strongest supplied evidence for two actual resonances near the targets, with resonances at 2.45 and 4.53 GHz and target S11 of -26.44 dB and -15.46 dB. Its high-band resonance is slightly above 4.50 GHz, while the target match already clears the stated threshold at both bands; reevaluation can establish whether this promising measured configuration is reproducible before exploring farther from it. The guidebook has no active rules, so this choice is based only on the ranked sample evidence and does not assume a predicted outcome.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 111.13,
+      "b": 51.21,
+      "l1": 20.49,
+      "l2": 14.18,
+      "l3": 37.29,
+      "s1": 0.89,
+      "s2": 3.7,
+      "s3": 0.59,
+      "f_l": 10.83
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": true,
+    "perturbation_applied": true,
+    "perturbation_random_numbers": {
+      "a": -0.7739685767008928,
+      "b": 0.3029455122633822,
+      "l1": -0.6692348540494624,
+      "l2": -0.8165337857744808,
+      "l3": 0.7630631072459084,
+      "s1": 0.8849089821188507,
+      "s2": -0.3695650217124882,
+      "s3": 0.653083733788846,
+      "f_l": -0.16750885772028612
+    },
+    "rationale": "This proposal retains the highest-ranked evaluated geometry as a focused repeat candidate: it is the strongest supplied evidence for two actual resonances near the targets, with resonances at 2.45 and 4.53 GHz and target S11 of -26.44 dB and -15.46 dB. Its high-band resonance is slightly above 4.50 GHz, while the target match already clears the stated threshold at both bands; reevaluation can establish whether this promising measured configuration is reproducible before exploring farther from it. The guidebook has no active rules, so this choice is based only on the ranked sample evidence and does not assume a predicted outcome.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 1,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 10.5
+      },
+      "rationale": "This nearby feed-line-length variation keeps the best-ranked sample's complete slot and substrate geometry, which produced two detected resonances at 2.45 and 4.53 GHz and target S11 values of -26.44 dB and -15.46 dB. Since its high-band resonance is close to 4.50 GHz and both fixed-target matches meet the threshold, a small feed adjustment is a conservative local candidate to test whether target matching and high-band alignment can improve without abandoning the strongest evidence. No supplied guidebook rule supports a directional prediction for this change, so its effect requires a new HFSS evaluation.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 10.5
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 10.5
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This nearby feed-line-length variation keeps the best-ranked sample's complete slot and substrate geometry, which produced two detected resonances at 2.45 and 4.53 GHz and target S11 values of -26.44 dB and -15.46 dB. Since its high-band resonance is close to 4.50 GHz and both fixed-target matches meet the threshold, a small feed adjustment is a conservative local candidate to test whether target matching and high-band alignment can improve without abandoning the strongest evidence. No supplied guidebook rule supports a directional prediction for this change, so its effect requires a new HFSS evaluation.",
+    "rules_used": [],
+    "error": null
+  }
+]

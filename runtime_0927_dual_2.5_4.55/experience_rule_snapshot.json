@@ -1,0 +1,168 @@
+[
+  {
+    "rule": "r-0038-01",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 116.02
+      },
+      "b": {
+        "min": 47.29,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.4,
+        "max": 22.55
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 34.63,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.78,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.42,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 10.7,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l1": "u"
+    },
+    "effect": {
+      "low_resonance_point": "k",
+      "s11_at_2_45": "k",
+      "high_resonance_point": "l",
+      "s11_at_4_50": "k"
+    },
+    "confidence": 0.68,
+    "source": ["iteration_0027_01", "iteration_0016_02", "iteration_0013_02", "iteration_0037_01", "iteration_0023_01", "iteration_0029_01", "iteration_0031_01", "iteration_0036_01", "iteration_0017_01", "iteration_0033_01", "iteration_0010_02", "iteration_0021_01", "iteration_0012_01", "iteration_0024_01", "iteration_0025_02", "iteration_0037_02", "iteration_0010_01", "iteration_0003_01", "iteration_0014_01", "iteration_0028_02", "iteration_0036_02", "iteration_0026_02", "iteration_0025_01", "iteration_0011_01", "iteration_0009_01", "iteration_0030_02", "iteration_0012_02", "iteration_0015_01", "iteration_0008_01", "iteration_0022_02"],
+    "note": "Within the dense a=115.00-116.02, b=47.29-50.00 cluster with l2=15, s2=4 and nearby slot/feed settings, increasing l1 from about 22.40 toward 22.55 tends to move the high resonance numerically lower. Low resonance and fixed-target S11 depths remain mixed across comparable samples; the high-resonance trend is clearest in the a=116.02,b=47.29 subset.",
+    "created_iteration": 38
+  },
+  {
+    "rule": "r-0038-02",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.45,
+        "max": 22.55
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 34.8,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "l3": "u"
+    },
+    "effect": {
+      "low_resonance_point": "l",
+      "s11_at_2_45": "s",
+      "high_resonance_point": "h",
+      "s11_at_4_50": "s"
+    },
+    "confidence": 0.65,
+    "source": ["iteration_0027_01", "iteration_0016_02", "iteration_0013_02", "iteration_0037_01", "iteration_0023_01", "iteration_0029_01", "iteration_0031_01", "iteration_0036_01", "iteration_0017_01", "iteration_0033_01", "iteration_0010_02", "iteration_0021_01", "iteration_0012_01", "iteration_0024_01", "iteration_0025_02", "iteration_0037_02", "iteration_0010_01", "iteration_0003_01", "iteration_0014_01", "iteration_0028_02", "iteration_0036_02", "iteration_0026_02", "iteration_0025_01", "iteration_0011_01", "iteration_0009_01", "iteration_0030_02", "iteration_0012_02", "iteration_0015_01", "iteration_0008_01", "iteration_0022_02"],
+    "note": "Within the a=115,b=50 family with l2=15, s1=0.8, s2=4, s3=0.5 and f_l=11, increasing l3 from about 34.80 toward 35.00 lowers the low resonance, raises the high resonance, and makes S11 at both fixed targets shallower.",
+    "created_iteration": 38
+  },
+  {
+    "rule": "r-0038-03",
+    "domain": {
+      "a": {
+        "min": 115.0,
+        "max": 115.0
+      },
+      "b": {
+        "min": 50.0,
+        "max": 50.0
+      },
+      "l1": {
+        "min": 22.45,
+        "max": 22.55
+      },
+      "l2": {
+        "min": 15.0,
+        "max": 15.0
+      },
+      "l3": {
+        "min": 34.8,
+        "max": 35.0
+      },
+      "s1": {
+        "min": 0.8,
+        "max": 0.8
+      },
+      "s2": {
+        "min": 4.0,
+        "max": 4.0
+      },
+      "s3": {
+        "min": 0.5,
+        "max": 0.5
+      },
+      "f_l": {
+        "min": 11.0,
+        "max": 11.0
+      }
+    },
+    "var_change": {
+      "a": "u",
+      "b": "d",
+      "l3": "d",
+      "s3": "d",
+      "f_l": "d"
+    },
+    "effect": {
+      "low_resonance_point": "h",
+      "s11_at_2_45": "d",
+      "high_resonance_point": "k",
+      "s11_at_4_50": "k"
+    },
+    "confidence": 0.6,
+    "source": ["iteration_0027_01", "iteration_0016_02", "iteration_0013_02", "iteration_0037_01", "iteration_0023_01", "iteration_0029_01", "iteration_0031_01", "iteration_0036_01", "iteration_0017_01", "iteration_0033_01", "iteration_0010_02", "iteration_0021_01", "iteration_0012_01", "iteration_0024_01", "iteration_0025_02", "iteration_0037_02", "iteration_0010_01", "iteration_0003_01", "iteration_0014_01", "iteration_0028_02", "iteration_0036_02", "iteration_0026_02", "iteration_0025_01", "iteration_0011_01", "iteration_0009_01", "iteration_0030_02", "iteration_0012_02", "iteration_0015_01", "iteration_0008_01", "iteration_0022_02"],
+    "note": "From the a=115,b=50,l3=34.80-35.00,s3=0.50,f_l=11.0 source cluster, a coordinated shift toward a=116.02,b=47.29,l3=34.63,s3=0.42-0.48,f_l=10.70 is associated with a slightly higher low resonance and substantially deeper S11 at 2.50 GHz. High resonance and 4.55 GHz depth remain mixed.",
+    "created_iteration": 38
+  }
+]

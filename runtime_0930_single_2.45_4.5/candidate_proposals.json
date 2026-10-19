@@ -1,0 +1,149 @@
+[
+  {
+    "iteration": 1,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 14.5,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 3.8,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "The candidate is a cautious variation of the highest-ranked sample, which already showed resonances near 2.45 GHz and 4.53 GHz, but the upper valley was slightly above 4.50 GHz so the fixed-target margin at 4.50 GHz was relatively small. I kept most geometry unchanged to preserve the strong low-band response, and made small coordinated adjustments to the middle slot by reducing l2 from 15.00 mm to 14.50 mm and s2 from 4.00 mm to 3.80 mm. In the supplied ranked evidence these variables are associated with a modest downward movement of the upper resonance, so this proposal aims to pull the high resonance closer to 4.50 GHz and deepen the 4.50 GHz fixed-frequency S11 without creating a large shift in the 2.45 GHz resonance. No active guidebook rules were available, so the proposal relies on local trends around the top-ranked sample and stays within all legal ranges.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 14.5,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 3.8,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 14.5,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 3.8,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "The candidate is a cautious variation of the highest-ranked sample, which already showed resonances near 2.45 GHz and 4.53 GHz, but the upper valley was slightly above 4.50 GHz so the fixed-target margin at 4.50 GHz was relatively small. I kept most geometry unchanged to preserve the strong low-band response, and made small coordinated adjustments to the middle slot by reducing l2 from 15.00 mm to 14.50 mm and s2 from 4.00 mm to 3.80 mm. In the supplied ranked evidence these variables are associated with a modest downward movement of the upper resonance, so this proposal aims to pull the high resonance closer to 4.50 GHz and deepen the 4.50 GHz fixed-frequency S11 without creating a large shift in the 2.45 GHz resonance. No active guidebook rules were available, so the proposal relies on local trends around the top-ranked sample and stays within all legal ranges.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 2,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 14.85,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "The rank-1 sample has the strongest evidence with both fixed-target S11 values near or below -15 dB and an upper resonance at 4.53 GHz, which is slightly high relative to the 4.50 GHz goal. The rank-2 sample shows that reducing l2 from 15.00 mm toward 14.50 mm while keeping the same substrate and most slot geometry moves the upper resonance downward, although its 4.50 GHz target S11 is shallower. I therefore propose a conservative change from the rank-1 geometry, reducing only l2 from 15.00 mm to 14.85 mm and keeping the other rank-1 parameters unchanged, to pull the upper resonance closer to 4.50 GHz while preserving the deep low-band match and the strong 4.50 GHz target match observed in the top-ranked sample.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 14.85,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 14.85,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "The rank-1 sample has the strongest evidence with both fixed-target S11 values near or below -15 dB and an upper resonance at 4.53 GHz, which is slightly high relative to the 4.50 GHz goal. The rank-2 sample shows that reducing l2 from 15.00 mm toward 14.50 mm while keeping the same substrate and most slot geometry moves the upper resonance downward, although its 4.50 GHz target S11 is shallower. I therefore propose a conservative change from the rank-1 geometry, reducing only l2 from 15.00 mm to 14.85 mm and keeping the other rank-1 parameters unchanged, to pull the upper resonance closer to 4.50 GHz while preserving the deep low-band match and the strong 4.50 GHz target match observed in the top-ranked sample.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 3,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 14.78,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "The top-ranked sample forms a narrow useful cluster at a=115 mm, b=50 mm, l1=22.5 mm, l3=35 mm, s1=0.8 mm, s2=4.0 mm, s3=0.5 mm, and f_l=11 mm with resonances near 2.44 and 4.51 GHz and strong target S11 values. In the nearby rank comparison, increasing l2 from 14.85 to 15.00 mm raised the low resonance to 2.45 GHz but also pushed the upper resonance to about 4.53 GHz and made the 4.50 GHz target S11 slightly shallower. This proposal keeps the proven geometry and reduces l2 slightly to 14.78 mm to pull the upper resonance back toward 4.50 GHz, while the low-band match remains close to 2.45 GHz and has enough depth margin to tolerate a small shift. The change is intentionally small and stays within the legal l2 range, using the strong low-band S11 margin to improve upper-band frequency and target S11 quality without moving far from the best observed cluster.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 14.78,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 14.78,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "The top-ranked sample forms a narrow useful cluster at a=115 mm, b=50 mm, l1=22.5 mm, l3=35 mm, s1=0.8 mm, s2=4.0 mm, s3=0.5 mm, and f_l=11 mm with resonances near 2.44 and 4.51 GHz and strong target S11 values. In the nearby rank comparison, increasing l2 from 14.85 to 15.00 mm raised the low resonance to 2.45 GHz but also pushed the upper resonance to about 4.53 GHz and made the 4.50 GHz target S11 slightly shallower. This proposal keeps the proven geometry and reduces l2 slightly to 14.78 mm to pull the upper resonance back toward 4.50 GHz, while the low-band match remains close to 2.45 GHz and has enough depth margin to tolerate a small shift. The change is intentionally small and stays within the legal l2 range, using the strong low-band S11 margin to improve upper-band frequency and target S11 quality without moving far from the best observed cluster.",
+    "rules_used": [],
+    "error": null
+  }
+]

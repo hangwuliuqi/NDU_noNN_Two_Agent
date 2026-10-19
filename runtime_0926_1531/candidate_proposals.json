@@ -1,0 +1,198 @@
+[
+  {
+    "iteration": 1,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 24.0,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate starts from the highest-ranked sample, which already showed a strong low resonance near 2.45 GHz and a high resonance at 4.53 GHz. I increased l1 from 22.50 mm to 24.00 mm while keeping the low-band slot length l3 at 35.00 mm; the longer upper slot is intended to lower the high resonance slightly toward 4.50 GHz without disrupting the low resonance. The middle slot parameters l2 and s2 are retained because they were associated with the best current dual-resonance separation, and the substrate and feed dimensions are kept unchanged to preserve the observed input matching near both target frequencies.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 24.0,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 24.0,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate starts from the highest-ranked sample, which already showed a strong low resonance near 2.45 GHz and a high resonance at 4.53 GHz. I increased l1 from 22.50 mm to 24.00 mm while keeping the low-band slot length l3 at 35.00 mm; the longer upper slot is intended to lower the high resonance slightly toward 4.50 GHz without disrupting the low resonance. The middle slot parameters l2 and s2 are retained because they were associated with the best current dual-resonance separation, and the substrate and feed dimensions are kept unchanged to preserve the observed input matching near both target frequencies.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 1,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 37.5,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate also uses the highest-ranked sample as the starting point but increases l3 from 35.00 mm to 37.50 mm; the ranked evidence contains a nearby sample with l3=37.50 mm that produced an actual low resonance at 2.40 GHz, suggesting this change can shift the observed 2.45 GHz low resonance downward toward the target. Other key values, including l1, l2, s1, s2, and s3, are kept at the best-ranked settings to retain the existing dual-resonance behavior and the favorable fixed-target S11 levels at 2.40 and 4.50 GHz.",
+      "rules_used": []
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 37.5,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 37.5,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate also uses the highest-ranked sample as the starting point but increases l3 from 35.00 mm to 37.50 mm; the ranked evidence contains a nearby sample with l3=37.50 mm that produced an actual low resonance at 2.40 GHz, suggesting this change can shift the observed 2.45 GHz low resonance downward toward the target. Other key values, including l1, l2, s1, s2, and s3, are kept at the best-ranked settings to retain the existing dual-resonance behavior and the favorable fixed-target S11 levels at 2.40 and 4.50 GHz.",
+    "rules_used": [],
+    "error": null
+  },
+  {
+    "iteration": 2,
+    "candidate_index": 1,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.5,
+        "l2": 15.0,
+        "l3": 35.8,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "Starting from the highest-ranked sample, which already shows two resonances near 2.45 GHz and 4.53 GHz with target S11 values close to the required threshold, this candidate makes only a modest increase of l3 from 35.00 mm to 35.80 mm. The active rule r-0001-01 indicates that in this compact cluster increasing l3 lowers the low resonance while the high resonance remains approximately unchanged. Since the rank-1 low resonance is slightly above 2.40 GHz, this small increase is intended to pull the lower resonance toward 2.40 GHz without overshooting to the 2.30 GHz region observed when l3 was increased to 37.50 mm. The remaining geometry is kept near the best observed design to preserve the favorable dual-band matching.",
+      "rules_used": ["r-0001-01"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.8,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.5,
+      "l2": 15.0,
+      "l3": 35.8,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "Starting from the highest-ranked sample, which already shows two resonances near 2.45 GHz and 4.53 GHz with target S11 values close to the required threshold, this candidate makes only a modest increase of l3 from 35.00 mm to 35.80 mm. The active rule r-0001-01 indicates that in this compact cluster increasing l3 lowers the low resonance while the high resonance remains approximately unchanged. Since the rank-1 low resonance is slightly above 2.40 GHz, this small increase is intended to pull the lower resonance toward 2.40 GHz without overshooting to the 2.30 GHz region observed when l3 was increased to 37.50 mm. The remaining geometry is kept near the best observed design to preserve the favorable dual-band matching.",
+    "rules_used": ["r-0001-01"],
+    "error": null
+  },
+  {
+    "iteration": 2,
+    "candidate_index": 2,
+    "raw": {
+      "variables": {
+        "a": 115.0,
+        "b": 50.0,
+        "l1": 22.6,
+        "l2": 15.0,
+        "l3": 35.0,
+        "s1": 0.8,
+        "s2": 4.0,
+        "s3": 0.5,
+        "f_l": 11.0
+      },
+      "rationale": "This candidate retains the best-ranked compact geometry and applies a very small increase of l1 from 22.50 mm to 22.60 mm, following rule r-0001-02. In the same rank-1 cluster, increasing l1 lowered the upper resonance, which is useful because the rank-1 design's upper resonance at 4.53 GHz is slightly above the 4.50 GHz target. A very small step is used to move the upper resonance closer to 4.50 GHz while limiting the associated upward shift of the low resonance that was observed with the larger l1 increase to 24.00 mm. All other dimensions remain fixed to preserve the strongest matching observed in the supplied samples.",
+      "rules_used": ["r-0001-02"]
+    },
+    "original_variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.6,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "variables": {
+      "a": 115.0,
+      "b": 50.0,
+      "l1": 22.6,
+      "l2": 15.0,
+      "l3": 35.0,
+      "s1": 0.8,
+      "s2": 4.0,
+      "s3": 0.5,
+      "f_l": 11.0
+    },
+    "valid_after_repair": true,
+    "out_of_bounds": false,
+    "duplicate_with_history_or_round": false,
+    "perturbation_applied": false,
+    "perturbation_random_numbers": {},
+    "rationale": "This candidate retains the best-ranked compact geometry and applies a very small increase of l1 from 22.50 mm to 22.60 mm, following rule r-0001-02. In the same rank-1 cluster, increasing l1 lowered the upper resonance, which is useful because the rank-1 design's upper resonance at 4.53 GHz is slightly above the 4.50 GHz target. A very small step is used to move the upper resonance closer to 4.50 GHz while limiting the associated upward shift of the low resonance that was observed with the larger l1 increase to 24.00 mm. All other dimensions remain fixed to preserve the strongest matching observed in the supplied samples.",
+    "rules_used": ["r-0001-02"],
+    "error": null
+  }
+]

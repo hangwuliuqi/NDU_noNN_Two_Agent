@@ -1,0 +1,97 @@
+2026-09-30 10:23:08,935 | INFO | llmo | configuration loaded from E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\project.conf
+2026-09-30 10:23:08,935 | INFO | llmo | ordered run logs: E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\runtime_0930_1023\logs\run_20260930_022308_934646
+2026-09-30 10:23:08,935 | INFO | llmo | run output directory: E:\ProjectData\LLM_Optimazation\LLMO_python\CPW_double_slot\NDU_noNN_single_can\runtime_0930_1023
+2026-09-30 10:23:09,105 | INFO | llmo | evaluated sample pool ready: total=40, newly imported=40
+2026-09-30 10:23:09,105 | INFO | llmo | sampling LLM: module=sampling, provider=deepseek, model_id=deepseek-v4-pro, base_url=https://api.deepseek.com
+2026-09-30 10:23:09,106 | INFO | llmo | experience LLM: module=experience, provider=deepseek, model_id=deepseek-v4-pro, base_url=https://api.deepseek.com
+2026-09-30 10:23:09,106 | INFO | llmo | running one-time sampling LLM preflight
+2026-09-30 10:23:10,024 | INFO | httpx | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 10:23:10,786 | INFO | llmo | running one-time experience LLM preflight
+2026-09-30 10:23:11,032 | INFO | httpx | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 10:23:12,267 | INFO | llmo | iteration 1/80 started
+2026-09-30 10:23:12,273 | INFO | llmo | sampling guidance input uses top-15 evaluated samples
+2026-09-30 10:23:12,524 | INFO | httpx | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 10:24:36,844 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=0, pending=1, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=0.0
+2026-09-30 10:25:22,071 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=45.2
+2026-09-30 10:26:07,308 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=90.5
+2026-09-30 10:26:52,572 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=135.7
+2026-09-30 10:27:37,822 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=181.0
+2026-09-30 10:28:23,110 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=226.3
+2026-09-30 10:29:08,384 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=271.5
+2026-09-30 10:29:53,620 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=316.8
+2026-09-30 10:30:38,854 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=362.0
+2026-09-30 10:31:24,101 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=407.3
+2026-09-30 10:32:09,342 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=452.5
+2026-09-30 10:32:54,601 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=497.8
+2026-09-30 10:33:39,825 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=543.0
+2026-09-30 10:34:25,082 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=588.2
+2026-09-30 10:35:10,323 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=633.5
+2026-09-30 10:35:55,566 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=678.7
+2026-09-30 10:36:40,825 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=724.0
+2026-09-30 10:37:26,092 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=769.2
+2026-09-30 10:38:11,316 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=814.5
+2026-09-30 10:38:56,607 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=859.8
+2026-09-30 10:39:41,851 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=905.0
+2026-09-30 10:40:27,132 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=950.3
+2026-09-30 10:41:12,361 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=995.5
+2026-09-30 10:41:57,608 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=1040.8
+2026-09-30 10:42:42,919 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=1086.1
+2026-09-30 10:43:28,134 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=1131.3
+2026-09-30 10:44:13,424 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=1176.6
+2026-09-30 10:44:58,656 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=1221.8
+2026-09-30 10:45:43,879 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=1267.0
+2026-09-30 10:45:46,041 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0001, done=1/1, success=1, running=0, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=0, elapsed_seconds=1269.2
+2026-09-30 10:45:46,202 | INFO | llmo | experience summary input uses top-30 evaluated samples
+2026-09-30 10:45:46,588 | INFO | httpx | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 10:52:00,058 | INFO | llmo | experience summary published a snapshot with 2 interaction rules
+2026-09-30 10:52:00,058 | INFO | llmo | iteration 1/80 completed; continuing optimization
+2026-09-30 10:52:00,058 | INFO | llmo | iteration 2/80 started
+2026-09-30 10:52:00,059 | INFO | llmo | sampling guidance input uses top-15 evaluated samples
+2026-09-30 10:52:00,195 | INFO | httpx | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 10:53:40,767 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=0, pending=1, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=0.0
+2026-09-30 10:54:26,097 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=45.3
+2026-09-30 10:55:11,461 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=90.7
+2026-09-30 10:55:56,826 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=136.1
+2026-09-30 10:56:42,138 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=181.4
+2026-09-30 10:57:27,475 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=226.7
+2026-09-30 10:58:12,800 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=272.0
+2026-09-30 10:58:58,081 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=317.3
+2026-09-30 10:59:43,377 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=362.6
+2026-09-30 11:00:28,639 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=407.9
+2026-09-30 11:01:13,950 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=453.2
+2026-09-30 11:01:59,303 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=498.5
+2026-09-30 11:02:44,623 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=543.9
+2026-09-30 11:03:29,896 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=589.1
+2026-09-30 11:04:15,215 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=634.5
+2026-09-30 11:05:00,576 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=679.8
+2026-09-30 11:05:45,904 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=725.1
+2026-09-30 11:06:31,243 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=770.5
+2026-09-30 11:07:16,557 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=815.8
+2026-09-30 11:07:27,351 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0002, done=1/1, success=1, running=0, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=0, elapsed_seconds=826.6
+2026-09-30 11:07:27,485 | INFO | llmo | experience summary input uses top-30 evaluated samples
+2026-09-30 11:07:27,668 | INFO | httpx | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 11:13:00,301 | INFO | llmo | experience summary published a snapshot with 3 interaction rules
+2026-09-30 11:13:00,301 | INFO | llmo | iteration 2/80 completed; continuing optimization
+2026-09-30 11:13:00,302 | INFO | llmo | iteration 3/80 started
+2026-09-30 11:13:00,302 | INFO | llmo | sampling guidance input uses top-15 evaluated samples
+2026-09-30 11:13:00,661 | INFO | httpx | HTTP Request: POST https://api.deepseek.com/chat/completions "HTTP/1.1 200 OK"
+2026-09-30 11:15:52,175 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=0, pending=1, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=0.0
+2026-09-30 11:16:37,495 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=45.3
+2026-09-30 11:17:22,788 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=90.6
+2026-09-30 11:18:08,098 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=135.9
+2026-09-30 11:18:53,409 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=181.2
+2026-09-30 11:19:38,722 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=226.5
+2026-09-30 11:20:23,990 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=271.8
+2026-09-30 11:21:09,314 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=317.1
+2026-09-30 11:21:54,666 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=362.5
+2026-09-30 11:22:39,974 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=407.8
+2026-09-30 11:23:25,236 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=453.1
+2026-09-30 11:24:10,513 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=498.3
+2026-09-30 11:24:55,819 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=543.7
+2026-09-30 11:25:41,103 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=588.9
+2026-09-30 11:26:26,409 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=634.2
+2026-09-30 11:27:11,767 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=679.6
+2026-09-30 11:27:57,059 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=724.9
+2026-09-30 11:28:42,400 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=0/1, success=0, running=1, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=1, elapsed_seconds=770.2
+2026-09-30 11:29:27,773 | INFO | client_submitter | 远程批次进度：batch_id=llmo-iteration-0003, done=1/1, success=1, running=0, pending=0, retry=0, failed=0, canceled=0, not_found=0, waiting=0, elapsed_seconds=815.6
+2026-09-30 11:29:28,671 | INFO | llmo | design goal satisfied at iteration 3
